@@ -12552,7 +12552,6 @@
 <XPD:ATTR name="Text" type="string">controladorLogin</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="QyZHnT/br0i5LR3HhMCv/gAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="r2QpyYAst0iJKYnRyBWS9QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12583,7 +12582,6 @@
 <XPD:ATTR name="Text" type="string">TelaLogin</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Em6/nShqUEyGfVJQp/2UKQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;boundary&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="qwV7X7hz5EOsJY7fDqcLJAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12614,7 +12612,6 @@
 <XPD:ATTR name="Text" type="string">PersistenciaLogin</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="2hCkYR7MrEmbYkcoFMA0qgAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity collection&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="e8+lem+H/kWELkrP8HD7tQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13313,7 +13310,6 @@
 <XPD:ATTR name="Text" type="string">TelaCadastroPM</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="SmfdNtlngUerMpsoqzl5fwAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;boundary&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="/JyEPpCLQ0SDOnUOTlZHCwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13344,7 +13340,6 @@
 <XPD:ATTR name="Text" type="string">ControladorCadastrarPM</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="duS9geMQlkeTenmtaCoWVQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="SDMf/J+u7EGKjddiAWyuDQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13375,7 +13370,6 @@
 <XPD:ATTR name="Text" type="string">PersistenciaCadastroPM</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="reDFsc/TXEeblcLWYsoJmQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity collection&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="P6h9tns+p06XeLGT1+JQkgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13406,7 +13400,6 @@
 <XPD:ATTR name="Text" type="string">TelaLogin</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="zgLTym2SjEeQLuHcNsxmcAAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;boundary&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="W5uG2A3VAU+m8ST08ILnMQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13613,7 +13606,6 @@
 <XPD:ATTR name="Text" type="string">TelaCadastroVeiculo</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Jk2eogc6t0mTgesqUCUdOgAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;boundary&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="vABlIZnDXEG8fgRMFPHL4QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13644,7 +13636,6 @@
 <XPD:ATTR name="Text" type="string">Veiculo</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="n5/sAkv4z0SO7D7w8afr1QAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="zqBr+WTWL0euKeklwErwbwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13675,7 +13666,6 @@
 <XPD:ATTR name="Text" type="string">ControladorCadastrarVeiculo</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="rQ4P8Vsp0kGdxagO4k86VQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="//LepIq1sk2+BTORx+cQ0AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13706,7 +13696,6 @@
 <XPD:ATTR name="Text" type="string">PersistenciaVeiculo</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="txA3Q4aYHkW46r573EnxagAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity collection&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="QsEzJWVX10uGP5dGI/wUpwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13737,7 +13726,6 @@
 <XPD:ATTR name="Text" type="string">controladorLogin</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="6I02hsok+0aD8rqLGusqlAAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="MT35/39nV0SYp64Dv0vfUgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13768,7 +13756,6 @@
 <XPD:ATTR name="Text" type="string">ControladorCadastrarAcidente</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="jf59vfy/6UKgizq0wXY8NwAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="18M2pDDENU2gubNhUBrTOAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14193,7 +14180,6 @@
 <XPD:ATTR name="Text" type="string">Envolvido</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="blQTUVP4l0WJESLvTU/BTQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="+BoRw+JouESg5meQMnExNAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14224,7 +14210,6 @@
 <XPD:ATTR name="Text" type="string">ControladorCadastrarEnvolvido</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="CEwi2P65yEKlBYkCzCgIjQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="WbTZSjvT1UyZd+2smyR+tAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14255,7 +14240,6 @@
 <XPD:ATTR name="Text" type="string">PersistenciaEnvolvido</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Zdy+34xjy0eNP/iMOF7YWwAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity collection&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="kxV2Lay+50WZOUjpoNUXNgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14286,7 +14270,6 @@
 <XPD:ATTR name="Text" type="string">controladorLogin</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="EakARunu10SI2PgHgOytNgAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="MO3pkfRtgkOnzyU7qw1OiAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14317,7 +14300,6 @@
 <XPD:ATTR name="Text" type="string">ControladorCadastrarAcidente</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="kNvUuLTE30+TY7M1cfwxrQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="x53VrK9Om0q1zRcrEx22+gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14806,7 +14788,6 @@
 <XPD:ATTR name="Text" type="string">CollaborationCadastroTrote:: : Trote</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="10/A4VKVokGtoI+aRpavBQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="08MKiVOPjUidArskBSbTTwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -15061,7 +15042,7 @@
 <XPD:ATTR name="Alpha" type="real">-0,523598775598299</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">25</XPD:ATTR>
 <XPD:ATTR name="EdgePosition" type="EdgePositionKind">epTail</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">1</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">*</XPD:ATTR>
 <XPD:REF name="Model">bw3sdT1SkkaLvjEqts4oSwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="HeadPropertyLabel" type="EdgeLabelView" guid="BuyZgw1t+UKUblS6F74auQAA">
@@ -15145,7 +15126,7 @@
 <XPD:ATTR name="Alpha" type="real">-0,523598775598299</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">25</XPD:ATTR>
 <XPD:ATTR name="EdgePosition" type="EdgePositionKind">epTail</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">1</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">*</XPD:ATTR>
 <XPD:REF name="Model">WiYaFPOepUSW63OGBVemDwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="HeadPropertyLabel" type="EdgeLabelView" guid="4/z0dcAY3UKwXtP/plT6XgAA">
@@ -16186,7 +16167,7 @@
 <XPD:REF name="Views[3]">Ds4OUA0JrUCXx65/4A65GAAA</XPD:REF>
 <XPD:ATTR name="#Connections" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Connections[0]" type="UMLAssociationEnd" guid="bw3sdT1SkkaLvjEqts4oSwAA">
-<XPD:ATTR name="Multiplicity" type="string">1</XPD:ATTR>
+<XPD:ATTR name="Multiplicity" type="string">*</XPD:ATTR>
 <XPD:REF name="Association">zQdY2esKF0SuuJK0exytUAAA</XPD:REF>
 <XPD:REF name="Participant">DO2TiXWz20WfoYZT0zsDrAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -16216,7 +16197,7 @@
 <XPD:REF name="Views[3]">pGYsGZYoIUaadhyMUVtpcwAA</XPD:REF>
 <XPD:ATTR name="#Connections" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Connections[0]" type="UMLAssociationEnd" guid="WiYaFPOepUSW63OGBVemDwAA">
-<XPD:ATTR name="Multiplicity" type="string">1</XPD:ATTR>
+<XPD:ATTR name="Multiplicity" type="string">*</XPD:ATTR>
 <XPD:REF name="Association">Sn3bmoT5eUijXO0Q6vjssAAA</XPD:REF>
 <XPD:REF name="Participant">DO2TiXWz20WfoYZT0zsDrAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -16647,7 +16628,6 @@
 <XPD:ATTR name="Text" type="string">/ : TelaCadastroAcidente</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="lGq7okYH10O6NCcME1phfwAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;boundary&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="dIDAYn20LUyj7/mUX6renAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -16671,7 +16651,6 @@
 <XPD:ATTR name="Text" type="string">/ : Acidente</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="B0OQLvwbxkyT8bM/Aexu2QAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="ma1m8dADKU+aBYcyf1s0PgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -16695,7 +16674,6 @@
 <XPD:ATTR name="Text" type="string">/ : ControladorCadastrarAcidente</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="UIL0m30ENUCkjdq5rYPbVQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="wyLi44xYPUOKMY9LkFR/HAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -17376,7 +17354,6 @@
 <XPD:ATTR name="Text" type="string">/ : TelaCadastroVeiculo</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="rz9OqsYUm06QFJeDExzSwAAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;boundary&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="bj+OPOuA90y0LmuhHVy40AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -17400,7 +17377,6 @@
 <XPD:ATTR name="Text" type="string">/ : Veiculo</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="/Rbvl+KN6Uy31llgeHKTtwAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="zXy5AtuiFkieiTBBhQ0hgAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -17424,7 +17400,6 @@
 <XPD:ATTR name="Text" type="string">/ : ControladorCadastrarVeiculo</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="jQGgNNjqTkuAi0LUEVezWQAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="7G4dS15eYkqpbZ2qfcxqQwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -17472,7 +17447,6 @@
 <XPD:ATTR name="Text" type="string">/ : TelaConcultaDadosVeiculo</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="cJ5BBW9PSkm9XsVCTuSmDAAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;boundary&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="kduOesuT3UizpEALqpZm1gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19530,7 +19504,6 @@
 <XPD:ATTR name="Text" type="string">/ : TelaCadastroEnvolvido</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="BTg34ACKsEaAv1+LKiwG8QAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;boundary&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="AJTh/lOh4Ee9hJFv/YZziwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19554,7 +19527,6 @@
 <XPD:ATTR name="Text" type="string">/ : Envolvido</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="qY0fVO6DaU6U7iskw2QaZgAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="tLDtY25NtUqZYpLqd89lzgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19578,7 +19550,6 @@
 <XPD:ATTR name="Text" type="string">/ : ControladorCadastrarEnvolvido</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ou1RAHSL/U6VMuB6I/hlZgAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="zvXoIWXysU6SnSEK981VAAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -20184,7 +20155,6 @@
 <XPD:ATTR name="Text" type="string"> : Trote</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="SovNPtJPEE6gH4R+YcB70gAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;entity&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="QBs7gS7iyEWLQbYwJHtv+gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -20208,7 +20178,6 @@
 <XPD:ATTR name="Text" type="string"> : controladorCadastroTrote</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="DUmzBu5leECgihv3DcSe2QAA">
-<XPD:ATTR name="Text" type="string">&lt;&lt;control&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="GLfqk/5oNkm469BXGLc27wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
