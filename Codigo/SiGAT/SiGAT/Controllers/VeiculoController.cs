@@ -6,20 +6,20 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SiGAT.Models;
+using SiGAT.Models.Negocio;
 
 namespace SiGAT.Controllers
 { 
     public class VeiculoController : Controller
     {
-        private SiGATEntities db = new SiGATEntities();
+        private NegocioVeiculo negocioveiculo = new NegocioVeiculo();
 
         //
         // GET: /Veiculo/
 
         public ViewResult Index()
         {
-            var veiculo = db.veiculo.Include("pessoa");
-            return View(veiculo.ToList());
+            return View(negocioveiculo.ObterTodos());
         }
 
         //
@@ -27,7 +27,7 @@ namespace SiGAT.Controllers
 
         public ViewResult Details(int id)
         {
-            Veiculo veiculo = db.veiculo.Single(v => v.idVeiculo == id);
+            Veiculo veiculo = negocioveiculo.Obter(id);
             return View(veiculo);
         }
 
@@ -36,7 +36,7 @@ namespace SiGAT.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome");
+            //ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome");
             return View();
         } 
 
@@ -48,12 +48,11 @@ namespace SiGAT.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.veiculo.AddObject(veiculo);
-                db.SaveChanges();
+                negocioveiculo.Inserir(veiculo);
                 return RedirectToAction("Index");  
             }
 
-            ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome", veiculo.idProprietario);
+            //ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome", veiculo.idProprietario);
             return View(veiculo);
         }
         
@@ -62,8 +61,8 @@ namespace SiGAT.Controllers
  
         public ActionResult Edit(int id)
         {
-            Veiculo veiculo = db.veiculo.Single(v => v.idVeiculo == id);
-            ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome", veiculo.idProprietario);
+            
+            Veiculo veiculo = negocioveiculo.Obter(id);
             return View(veiculo);
         }
 
@@ -75,12 +74,10 @@ namespace SiGAT.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.veiculo.Attach(veiculo);
-                db.ObjectStateManager.ChangeObjectState(veiculo, EntityState.Modified);
-                db.SaveChanges();
+                negocioveiculo.Editar(veiculo);
                 return RedirectToAction("Index");
             }
-            ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome", veiculo.idProprietario);
+            //ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome", veiculo.idProprietario);
             return View(veiculo);
         }
 
@@ -89,7 +86,7 @@ namespace SiGAT.Controllers
  
         public ActionResult Delete(int id)
         {
-            Veiculo veiculo = db.veiculo.Single(v => v.idVeiculo == id);
+            Veiculo veiculo = negocioveiculo.Obter(id);
             return View(veiculo);
         }
 
@@ -98,17 +95,9 @@ namespace SiGAT.Controllers
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
-        {            
-            Veiculo veiculo = db.veiculo.Single(v => v.idVeiculo == id);
-            db.veiculo.DeleteObject(veiculo);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
         {
-            db.Dispose();
-            base.Dispose(disposing);
+            negocioveiculo.Remover(id);
+            return RedirectToAction("Index");
         }
     }
 }

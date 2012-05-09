@@ -18,21 +18,21 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("sigatModel", "FK_Cidade", "cidade", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.cidade), "endereco", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.endereco), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "FK_Estado", "estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(SiGAT.Models.estado), "cidade", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.cidade), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "fk_Ocorrencia_condicaoTempo1", "condicaotempo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.condicaotempo), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "fk_Ocorrencia_condicaoVia1", "condicaovia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.condicaovia), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "FK_Endereco", "endereco", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(SiGAT.Models.endereco), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "FK_EnderecoPessoa", "endereco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.endereco), "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "fk_Trote_Endereco1", "endereco", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(SiGAT.Models.endereco), "trote", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.trote), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.sinalizacaovia), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.tipoocorrencia), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "fk_Pessoa_Telefone1", "telefone", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.telefone), "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "FK_ProprietarioVeiculo", "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.Pessoa), "veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Veiculo), true)]
-[assembly: EdmRelationshipAttribute("sigatModel", "envolvido", "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa))]
-[assembly: EdmRelationshipAttribute("sigatModel", "pmocorrencia", "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa))]
-[assembly: EdmRelationshipAttribute("sigatModel", "pmtrote", "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa), "trote", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.trote))]
-[assembly: EdmRelationshipAttribute("sigatModel", "veiculoocorrencia", "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), "veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Veiculo))]
+[assembly: EdmRelationshipAttribute("SiGATModel", "FK_Cidade", "cidade", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.Cidade), "endereco", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Endereco), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "FK_Estado", "estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(SiGAT.Models.Estado), "cidade", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Cidade), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "fk_Ocorrencia_condicaoTempo1", "condicaotempo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.CondicaoTempo), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "fk_Ocorrencia_condicaoVia1", "condicaovia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.CondicaoVia), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "FK_Endereco", "endereco", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(SiGAT.Models.Endereco), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "FK_EnderecoPessoa", "endereco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.Endereco), "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "fk_Trote_Endereco1", "endereco", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(SiGAT.Models.Endereco), "trote", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Trote), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.SinalizacaoVia), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.TipoOcorrencia), "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "FK_ProprietarioVeiculo", "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.Pessoa), "veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Veiculo), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "fk_Telefone_Pessoa1", "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SiGAT.Models.Pessoa), "telefone", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Telefone), true)]
+[assembly: EdmRelationshipAttribute("SiGATModel", "envolvido", "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa))]
+[assembly: EdmRelationshipAttribute("SiGATModel", "pmocorrencia", "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa))]
+[assembly: EdmRelationshipAttribute("SiGATModel", "pmtrote", "pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Pessoa), "trote", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Trote))]
+[assembly: EdmRelationshipAttribute("SiGATModel", "veiculoocorrencia", "ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.ocorrencia), "veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SiGAT.Models.Veiculo))]
 
 #endregion
 
@@ -87,82 +87,82 @@ namespace SiGAT.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<cidade> cidade
+        public ObjectSet<Cidade> CidadeSet
         {
             get
             {
-                if ((_cidade == null))
+                if ((_CidadeSet == null))
                 {
-                    _cidade = base.CreateObjectSet<cidade>("cidade");
+                    _CidadeSet = base.CreateObjectSet<Cidade>("CidadeSet");
                 }
-                return _cidade;
+                return _CidadeSet;
             }
         }
-        private ObjectSet<cidade> _cidade;
+        private ObjectSet<Cidade> _CidadeSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<condicaotempo> condicaotempo
+        public ObjectSet<CondicaoTempo> CondicaoTempoSet
         {
             get
             {
-                if ((_condicaotempo == null))
+                if ((_CondicaoTempoSet == null))
                 {
-                    _condicaotempo = base.CreateObjectSet<condicaotempo>("condicaotempo");
+                    _CondicaoTempoSet = base.CreateObjectSet<CondicaoTempo>("CondicaoTempoSet");
                 }
-                return _condicaotempo;
+                return _CondicaoTempoSet;
             }
         }
-        private ObjectSet<condicaotempo> _condicaotempo;
+        private ObjectSet<CondicaoTempo> _CondicaoTempoSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<condicaovia> condicaovia
+        public ObjectSet<CondicaoVia> CondicaoViaSet
         {
             get
             {
-                if ((_condicaovia == null))
+                if ((_CondicaoViaSet == null))
                 {
-                    _condicaovia = base.CreateObjectSet<condicaovia>("condicaovia");
+                    _CondicaoViaSet = base.CreateObjectSet<CondicaoVia>("CondicaoViaSet");
                 }
-                return _condicaovia;
+                return _CondicaoViaSet;
             }
         }
-        private ObjectSet<condicaovia> _condicaovia;
+        private ObjectSet<CondicaoVia> _CondicaoViaSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<endereco> endereco
+        public ObjectSet<Endereco> EnderecoSet
         {
             get
             {
-                if ((_endereco == null))
+                if ((_EnderecoSet == null))
                 {
-                    _endereco = base.CreateObjectSet<endereco>("endereco");
+                    _EnderecoSet = base.CreateObjectSet<Endereco>("EnderecoSet");
                 }
-                return _endereco;
+                return _EnderecoSet;
             }
         }
-        private ObjectSet<endereco> _endereco;
+        private ObjectSet<Endereco> _EnderecoSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<estado> estado
+        public ObjectSet<Estado> EstadoSet
         {
             get
             {
-                if ((_estado == null))
+                if ((_EstadoSet == null))
                 {
-                    _estado = base.CreateObjectSet<estado>("estado");
+                    _EstadoSet = base.CreateObjectSet<Estado>("EstadoSet");
                 }
-                return _estado;
+                return _EstadoSet;
             }
         }
-        private ObjectSet<estado> _estado;
+        private ObjectSet<Estado> _EstadoSet;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -183,140 +183,140 @@ namespace SiGAT.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Pessoa> pessoa
+        public ObjectSet<Pessoa> PessoaSet
         {
             get
             {
-                if ((_pessoa == null))
+                if ((_PessoaSet == null))
                 {
-                    _pessoa = base.CreateObjectSet<Pessoa>("pessoa");
+                    _PessoaSet = base.CreateObjectSet<Pessoa>("PessoaSet");
                 }
-                return _pessoa;
+                return _PessoaSet;
             }
         }
-        private ObjectSet<Pessoa> _pessoa;
+        private ObjectSet<Pessoa> _PessoaSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<sinalizacaovia> sinalizacaovia
+        public ObjectSet<SinalizacaoVia> SinalizacaoViaSet
         {
             get
             {
-                if ((_sinalizacaovia == null))
+                if ((_SinalizacaoViaSet == null))
                 {
-                    _sinalizacaovia = base.CreateObjectSet<sinalizacaovia>("sinalizacaovia");
+                    _SinalizacaoViaSet = base.CreateObjectSet<SinalizacaoVia>("SinalizacaoViaSet");
                 }
-                return _sinalizacaovia;
+                return _SinalizacaoViaSet;
             }
         }
-        private ObjectSet<sinalizacaovia> _sinalizacaovia;
+        private ObjectSet<SinalizacaoVia> _SinalizacaoViaSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<telefone> telefone
+        public ObjectSet<Telefone> TelefoneSet
         {
             get
             {
-                if ((_telefone == null))
+                if ((_TelefoneSet == null))
                 {
-                    _telefone = base.CreateObjectSet<telefone>("telefone");
+                    _TelefoneSet = base.CreateObjectSet<Telefone>("TelefoneSet");
                 }
-                return _telefone;
+                return _TelefoneSet;
             }
         }
-        private ObjectSet<telefone> _telefone;
+        private ObjectSet<Telefone> _TelefoneSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tipoocorrencia> tipoocorrencia
+        public ObjectSet<TipoOcorrencia> TipoOcorrenciaSet
         {
             get
             {
-                if ((_tipoocorrencia == null))
+                if ((_TipoOcorrenciaSet == null))
                 {
-                    _tipoocorrencia = base.CreateObjectSet<tipoocorrencia>("tipoocorrencia");
+                    _TipoOcorrenciaSet = base.CreateObjectSet<TipoOcorrencia>("TipoOcorrenciaSet");
                 }
-                return _tipoocorrencia;
+                return _TipoOcorrenciaSet;
             }
         }
-        private ObjectSet<tipoocorrencia> _tipoocorrencia;
+        private ObjectSet<TipoOcorrencia> _TipoOcorrenciaSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<trote> trote
+        public ObjectSet<Trote> TroteSet
         {
             get
             {
-                if ((_trote == null))
+                if ((_TroteSet == null))
                 {
-                    _trote = base.CreateObjectSet<trote>("trote");
+                    _TroteSet = base.CreateObjectSet<Trote>("TroteSet");
                 }
-                return _trote;
+                return _TroteSet;
             }
         }
-        private ObjectSet<trote> _trote;
+        private ObjectSet<Trote> _TroteSet;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Veiculo> veiculo
+        public ObjectSet<Veiculo> VeiculoSet
         {
             get
             {
-                if ((_veiculo == null))
+                if ((_VeiculoSet == null))
                 {
-                    _veiculo = base.CreateObjectSet<Veiculo>("veiculo");
+                    _VeiculoSet = base.CreateObjectSet<Veiculo>("VeiculoSet");
                 }
-                return _veiculo;
+                return _VeiculoSet;
             }
         }
-        private ObjectSet<Veiculo> _veiculo;
+        private ObjectSet<Veiculo> _VeiculoSet;
 
         #endregion
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the cidade EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the CidadeSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTocidade(cidade cidade)
+        public void AddToCidadeSet(Cidade cidade)
         {
-            base.AddObject("cidade", cidade);
+            base.AddObject("CidadeSet", cidade);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the condicaotempo EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the CondicaoTempoSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTocondicaotempo(condicaotempo condicaotempo)
+        public void AddToCondicaoTempoSet(CondicaoTempo condicaoTempo)
         {
-            base.AddObject("condicaotempo", condicaotempo);
+            base.AddObject("CondicaoTempoSet", condicaoTempo);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the condicaovia EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the CondicaoViaSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTocondicaovia(condicaovia condicaovia)
+        public void AddToCondicaoViaSet(CondicaoVia condicaoVia)
         {
-            base.AddObject("condicaovia", condicaovia);
+            base.AddObject("CondicaoViaSet", condicaoVia);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the endereco EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the EnderecoSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToendereco(endereco endereco)
+        public void AddToEnderecoSet(Endereco endereco)
         {
-            base.AddObject("endereco", endereco);
+            base.AddObject("EnderecoSet", endereco);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the estado EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the EstadoSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToestado(estado estado)
+        public void AddToEstadoSet(Estado estado)
         {
-            base.AddObject("estado", estado);
+            base.AddObject("EstadoSet", estado);
         }
     
         /// <summary>
@@ -328,51 +328,51 @@ namespace SiGAT.Models
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the pessoa EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the PessoaSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTopessoa(Pessoa pessoa)
+        public void AddToPessoaSet(Pessoa pessoa)
         {
-            base.AddObject("pessoa", pessoa);
+            base.AddObject("PessoaSet", pessoa);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the sinalizacaovia EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the SinalizacaoViaSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTosinalizacaovia(sinalizacaovia sinalizacaovia)
+        public void AddToSinalizacaoViaSet(SinalizacaoVia sinalizacaoVia)
         {
-            base.AddObject("sinalizacaovia", sinalizacaovia);
+            base.AddObject("SinalizacaoViaSet", sinalizacaoVia);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the telefone EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the TelefoneSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTotelefone(telefone telefone)
+        public void AddToTelefoneSet(Telefone telefone)
         {
-            base.AddObject("telefone", telefone);
+            base.AddObject("TelefoneSet", telefone);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the tipoocorrencia EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the TipoOcorrenciaSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTotipoocorrencia(tipoocorrencia tipoocorrencia)
+        public void AddToTipoOcorrenciaSet(TipoOcorrencia tipoOcorrencia)
         {
-            base.AddObject("tipoocorrencia", tipoocorrencia);
+            base.AddObject("TipoOcorrenciaSet", tipoOcorrencia);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the trote EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the TroteSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTotrote(trote trote)
+        public void AddToTroteSet(Trote trote)
         {
-            base.AddObject("trote", trote);
+            base.AddObject("TroteSet", trote);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the veiculo EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the VeiculoSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToveiculo(Veiculo veiculo)
+        public void AddToVeiculoSet(Veiculo veiculo)
         {
-            base.AddObject("veiculo", veiculo);
+            base.AddObject("VeiculoSet", veiculo);
         }
 
         #endregion
@@ -386,20 +386,20 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="cidade")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="Cidade")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class cidade : EntityObject
+    public partial class Cidade : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new cidade object.
+        /// Create a new Cidade object.
         /// </summary>
         /// <param name="idCidade">Initial value of the idCidade property.</param>
-        public static cidade Createcidade(global::System.Int32 idCidade)
+        public static Cidade CreateCidade(global::System.Int32 idCidade)
         {
-            cidade cidade = new cidade();
+            Cidade cidade = new Cidade();
             cidade.idCidade = idCidade;
             return cidade;
         }
@@ -492,18 +492,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_Cidade", "endereco")]
-        public EntityCollection<endereco> endereco
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_Cidade", "endereco")]
+        public EntityCollection<Endereco> endereco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<endereco>("sigatModel.FK_Cidade", "endereco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Endereco>("SiGATModel.FK_Cidade", "endereco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<endereco>("sigatModel.FK_Cidade", "endereco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Endereco>("SiGATModel.FK_Cidade", "endereco", value);
                 }
             }
         }
@@ -514,16 +514,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_Estado", "estado")]
-        public estado estado
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_Estado", "estado")]
+        public Estado estado
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<estado>("sigatModel.FK_Estado", "estado").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("SiGATModel.FK_Estado", "estado").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<estado>("sigatModel.FK_Estado", "estado").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("SiGATModel.FK_Estado", "estado").Value = value;
             }
         }
         /// <summary>
@@ -531,17 +531,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<estado> estadoReference
+        public EntityReference<Estado> estadoReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<estado>("sigatModel.FK_Estado", "estado");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("SiGATModel.FK_Estado", "estado");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<estado>("sigatModel.FK_Estado", "estado", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("SiGATModel.FK_Estado", "estado", value);
                 }
             }
         }
@@ -552,24 +552,24 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="condicaotempo")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="CondicaoTempo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class condicaotempo : EntityObject
+    public partial class CondicaoTempo : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new condicaotempo object.
+        /// Create a new CondicaoTempo object.
         /// </summary>
         /// <param name="idCondicaoTempo">Initial value of the idCondicaoTempo property.</param>
         /// <param name="descricao">Initial value of the descricao property.</param>
-        public static condicaotempo Createcondicaotempo(global::System.Int32 idCondicaoTempo, global::System.String descricao)
+        public static CondicaoTempo CreateCondicaoTempo(global::System.Int32 idCondicaoTempo, global::System.String descricao)
         {
-            condicaotempo condicaotempo = new condicaotempo();
-            condicaotempo.idCondicaoTempo = idCondicaoTempo;
-            condicaotempo.descricao = descricao;
-            return condicaotempo;
+            CondicaoTempo condicaoTempo = new CondicaoTempo();
+            condicaoTempo.idCondicaoTempo = idCondicaoTempo;
+            condicaoTempo.descricao = descricao;
+            return condicaoTempo;
         }
 
         #endregion
@@ -636,18 +636,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Ocorrencia_condicaoTempo1", "ocorrencia")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Ocorrencia_condicaoTempo1", "ocorrencia")]
         public EntityCollection<ocorrencia> ocorrencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("sigatModel.fk_Ocorrencia_condicaoTempo1", "ocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("SiGATModel.fk_Ocorrencia_condicaoTempo1", "ocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("sigatModel.fk_Ocorrencia_condicaoTempo1", "ocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("SiGATModel.fk_Ocorrencia_condicaoTempo1", "ocorrencia", value);
                 }
             }
         }
@@ -658,24 +658,24 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="condicaovia")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="CondicaoVia")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class condicaovia : EntityObject
+    public partial class CondicaoVia : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new condicaovia object.
+        /// Create a new CondicaoVia object.
         /// </summary>
         /// <param name="idCondicaoVia">Initial value of the idCondicaoVia property.</param>
         /// <param name="descricao">Initial value of the descricao property.</param>
-        public static condicaovia Createcondicaovia(global::System.Int32 idCondicaoVia, global::System.String descricao)
+        public static CondicaoVia CreateCondicaoVia(global::System.Int32 idCondicaoVia, global::System.String descricao)
         {
-            condicaovia condicaovia = new condicaovia();
-            condicaovia.idCondicaoVia = idCondicaoVia;
-            condicaovia.descricao = descricao;
-            return condicaovia;
+            CondicaoVia condicaoVia = new CondicaoVia();
+            condicaoVia.idCondicaoVia = idCondicaoVia;
+            condicaoVia.descricao = descricao;
+            return condicaoVia;
         }
 
         #endregion
@@ -742,18 +742,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Ocorrencia_condicaoVia1", "ocorrencia")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Ocorrencia_condicaoVia1", "ocorrencia")]
         public EntityCollection<ocorrencia> ocorrencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("sigatModel.fk_Ocorrencia_condicaoVia1", "ocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("SiGATModel.fk_Ocorrencia_condicaoVia1", "ocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("sigatModel.fk_Ocorrencia_condicaoVia1", "ocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("SiGATModel.fk_Ocorrencia_condicaoVia1", "ocorrencia", value);
                 }
             }
         }
@@ -764,23 +764,23 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="endereco")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="Endereco")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class endereco : EntityObject
+    public partial class Endereco : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new endereco object.
+        /// Create a new Endereco object.
         /// </summary>
         /// <param name="idEndereco">Initial value of the idEndereco property.</param>
         /// <param name="logradouro">Initial value of the logradouro property.</param>
         /// <param name="bairro">Initial value of the bairro property.</param>
         /// <param name="idCidade">Initial value of the idCidade property.</param>
-        public static endereco Createendereco(global::System.Int32 idEndereco, global::System.String logradouro, global::System.String bairro, global::System.Int32 idCidade)
+        public static Endereco CreateEndereco(global::System.Int32 idEndereco, global::System.String logradouro, global::System.String bairro, global::System.Int32 idCidade)
         {
-            endereco endereco = new endereco();
+            Endereco endereco = new Endereco();
             endereco.idEndereco = idEndereco;
             endereco.logradouro = logradouro;
             endereco.bairro = bairro;
@@ -924,16 +924,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_Cidade", "cidade")]
-        public cidade cidade
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_Cidade", "cidade")]
+        public Cidade cidade
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<cidade>("sigatModel.FK_Cidade", "cidade").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cidade>("SiGATModel.FK_Cidade", "cidade").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<cidade>("sigatModel.FK_Cidade", "cidade").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cidade>("SiGATModel.FK_Cidade", "cidade").Value = value;
             }
         }
         /// <summary>
@@ -941,17 +941,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<cidade> cidadeReference
+        public EntityReference<Cidade> cidadeReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<cidade>("sigatModel.FK_Cidade", "cidade");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cidade>("SiGATModel.FK_Cidade", "cidade");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<cidade>("sigatModel.FK_Cidade", "cidade", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cidade>("SiGATModel.FK_Cidade", "cidade", value);
                 }
             }
         }
@@ -962,18 +962,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_Endereco", "ocorrencia")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_Endereco", "ocorrencia")]
         public EntityCollection<ocorrencia> ocorrencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("sigatModel.FK_Endereco", "ocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("SiGATModel.FK_Endereco", "ocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("sigatModel.FK_Endereco", "ocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("SiGATModel.FK_Endereco", "ocorrencia", value);
                 }
             }
         }
@@ -984,18 +984,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_EnderecoPessoa", "pessoa")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_EnderecoPessoa", "pessoa")]
         public EntityCollection<Pessoa> pessoa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("sigatModel.FK_EnderecoPessoa", "pessoa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("SiGATModel.FK_EnderecoPessoa", "pessoa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("sigatModel.FK_EnderecoPessoa", "pessoa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("SiGATModel.FK_EnderecoPessoa", "pessoa", value);
                 }
             }
         }
@@ -1006,18 +1006,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Trote_Endereco1", "trote")]
-        public EntityCollection<trote> trote
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Trote_Endereco1", "trote")]
+        public EntityCollection<Trote> trote
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<trote>("sigatModel.fk_Trote_Endereco1", "trote");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Trote>("SiGATModel.fk_Trote_Endereco1", "trote");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<trote>("sigatModel.fk_Trote_Endereco1", "trote", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Trote>("SiGATModel.fk_Trote_Endereco1", "trote", value);
                 }
             }
         }
@@ -1028,20 +1028,20 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="estado")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="Estado")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class estado : EntityObject
+    public partial class Estado : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new estado object.
+        /// Create a new Estado object.
         /// </summary>
         /// <param name="idEstado">Initial value of the idEstado property.</param>
-        public static estado Createestado(global::System.Int32 idEstado)
+        public static Estado CreateEstado(global::System.Int32 idEstado)
         {
-            estado estado = new estado();
+            Estado estado = new Estado();
             estado.idEstado = idEstado;
             return estado;
         }
@@ -1110,18 +1110,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_Estado", "cidade")]
-        public EntityCollection<cidade> cidade
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_Estado", "cidade")]
+        public EntityCollection<Cidade> cidade
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<cidade>("sigatModel.FK_Estado", "cidade");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Cidade>("SiGATModel.FK_Estado", "cidade");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<cidade>("sigatModel.FK_Estado", "cidade", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Cidade>("SiGATModel.FK_Estado", "cidade", value);
                 }
             }
         }
@@ -1132,7 +1132,7 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="ocorrencia")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="ocorrencia")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ocorrencia : EntityObject
@@ -1390,16 +1390,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Ocorrencia_condicaoTempo1", "condicaotempo")]
-        public condicaotempo condicaotempo
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Ocorrencia_condicaoTempo1", "condicaotempo")]
+        public CondicaoTempo condicaotempo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<condicaotempo>("sigatModel.fk_Ocorrencia_condicaoTempo1", "condicaotempo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CondicaoTempo>("SiGATModel.fk_Ocorrencia_condicaoTempo1", "condicaotempo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<condicaotempo>("sigatModel.fk_Ocorrencia_condicaoTempo1", "condicaotempo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CondicaoTempo>("SiGATModel.fk_Ocorrencia_condicaoTempo1", "condicaotempo").Value = value;
             }
         }
         /// <summary>
@@ -1407,17 +1407,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<condicaotempo> condicaotempoReference
+        public EntityReference<CondicaoTempo> condicaotempoReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<condicaotempo>("sigatModel.fk_Ocorrencia_condicaoTempo1", "condicaotempo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CondicaoTempo>("SiGATModel.fk_Ocorrencia_condicaoTempo1", "condicaotempo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<condicaotempo>("sigatModel.fk_Ocorrencia_condicaoTempo1", "condicaotempo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CondicaoTempo>("SiGATModel.fk_Ocorrencia_condicaoTempo1", "condicaotempo", value);
                 }
             }
         }
@@ -1428,16 +1428,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Ocorrencia_condicaoVia1", "condicaovia")]
-        public condicaovia condicaovia
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Ocorrencia_condicaoVia1", "condicaovia")]
+        public CondicaoVia condicaovia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<condicaovia>("sigatModel.fk_Ocorrencia_condicaoVia1", "condicaovia").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CondicaoVia>("SiGATModel.fk_Ocorrencia_condicaoVia1", "condicaovia").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<condicaovia>("sigatModel.fk_Ocorrencia_condicaoVia1", "condicaovia").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CondicaoVia>("SiGATModel.fk_Ocorrencia_condicaoVia1", "condicaovia").Value = value;
             }
         }
         /// <summary>
@@ -1445,17 +1445,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<condicaovia> condicaoviaReference
+        public EntityReference<CondicaoVia> condicaoviaReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<condicaovia>("sigatModel.fk_Ocorrencia_condicaoVia1", "condicaovia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CondicaoVia>("SiGATModel.fk_Ocorrencia_condicaoVia1", "condicaovia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<condicaovia>("sigatModel.fk_Ocorrencia_condicaoVia1", "condicaovia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CondicaoVia>("SiGATModel.fk_Ocorrencia_condicaoVia1", "condicaovia", value);
                 }
             }
         }
@@ -1466,16 +1466,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_Endereco", "endereco")]
-        public endereco endereco
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_Endereco", "endereco")]
+        public Endereco endereco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.FK_Endereco", "endereco").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.FK_Endereco", "endereco").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.FK_Endereco", "endereco").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.FK_Endereco", "endereco").Value = value;
             }
         }
         /// <summary>
@@ -1483,17 +1483,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<endereco> enderecoReference
+        public EntityReference<Endereco> enderecoReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.FK_Endereco", "endereco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.FK_Endereco", "endereco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<endereco>("sigatModel.FK_Endereco", "endereco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Endereco>("SiGATModel.FK_Endereco", "endereco", value);
                 }
             }
         }
@@ -1504,16 +1504,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia")]
-        public sinalizacaovia sinalizacaovia
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia")]
+        public SinalizacaoVia sinalizacaovia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<sinalizacaovia>("sigatModel.fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SinalizacaoVia>("SiGATModel.fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<sinalizacaovia>("sigatModel.fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SinalizacaoVia>("SiGATModel.fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia").Value = value;
             }
         }
         /// <summary>
@@ -1521,17 +1521,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<sinalizacaovia> sinalizacaoviaReference
+        public EntityReference<SinalizacaoVia> sinalizacaoviaReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<sinalizacaovia>("sigatModel.fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SinalizacaoVia>("SiGATModel.fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<sinalizacaovia>("sigatModel.fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SinalizacaoVia>("SiGATModel.fk_Ocorrencia_sinalizacaoVia1", "sinalizacaovia", value);
                 }
             }
         }
@@ -1542,16 +1542,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia")]
-        public tipoocorrencia tipoocorrencia
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia")]
+        public TipoOcorrencia tipoocorrencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tipoocorrencia>("sigatModel.fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoOcorrencia>("SiGATModel.fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tipoocorrencia>("sigatModel.fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoOcorrencia>("SiGATModel.fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia").Value = value;
             }
         }
         /// <summary>
@@ -1559,17 +1559,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<tipoocorrencia> tipoocorrenciaReference
+        public EntityReference<TipoOcorrencia> tipoocorrenciaReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tipoocorrencia>("sigatModel.fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoOcorrencia>("SiGATModel.fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tipoocorrencia>("sigatModel.fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoOcorrencia>("SiGATModel.fk_Ocorrencia_TipoOcorrencia1", "tipoocorrencia", value);
                 }
             }
         }
@@ -1580,18 +1580,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "envolvido", "pessoa")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "envolvido", "pessoa")]
         public EntityCollection<Pessoa> pessoa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("sigatModel.envolvido", "pessoa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("SiGATModel.envolvido", "pessoa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("sigatModel.envolvido", "pessoa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("SiGATModel.envolvido", "pessoa", value);
                 }
             }
         }
@@ -1602,18 +1602,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "pmocorrencia", "pessoa")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "pmocorrencia", "pessoa")]
         public EntityCollection<Pessoa> pessoa1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("sigatModel.pmocorrencia", "pessoa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("SiGATModel.pmocorrencia", "pessoa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("sigatModel.pmocorrencia", "pessoa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("SiGATModel.pmocorrencia", "pessoa", value);
                 }
             }
         }
@@ -1624,18 +1624,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "veiculoocorrencia", "veiculo")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "veiculoocorrencia", "veiculo")]
         public EntityCollection<Veiculo> veiculo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Veiculo>("sigatModel.veiculoocorrencia", "veiculo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Veiculo>("SiGATModel.veiculoocorrencia", "veiculo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Veiculo>("sigatModel.veiculoocorrencia", "veiculo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Veiculo>("SiGATModel.veiculoocorrencia", "veiculo", value);
                 }
             }
         }
@@ -1646,7 +1646,7 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="Pessoa")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="Pessoa")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Pessoa : EntityObject
@@ -1662,8 +1662,7 @@ namespace SiGAT.Models
         /// <param name="nome">Initial value of the nome property.</param>
         /// <param name="dataNascimento">Initial value of the dataNascimento property.</param>
         /// <param name="idEndereco">Initial value of the idEndereco property.</param>
-        /// <param name="idTelefone">Initial value of the idTelefone property.</param>
-        public static Pessoa CreatePessoa(global::System.Int32 idPessoa, global::System.Int32 cnh, global::System.Int32 cpf, global::System.String nome, global::System.DateTime dataNascimento, global::System.Int32 idEndereco, global::System.Int32 idTelefone)
+        public static Pessoa CreatePessoa(global::System.Int32 idPessoa, global::System.Int32 cnh, global::System.Int32 cpf, global::System.String nome, global::System.DateTime dataNascimento, global::System.Int32 idEndereco)
         {
             Pessoa pessoa = new Pessoa();
             pessoa.idPessoa = idPessoa;
@@ -1672,7 +1671,6 @@ namespace SiGAT.Models
             pessoa.nome = nome;
             pessoa.dataNascimento = dataNascimento;
             pessoa.idEndereco = idEndereco;
-            pessoa.idTelefone = idTelefone;
             return pessoa;
         }
 
@@ -1853,30 +1851,6 @@ namespace SiGAT.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idTelefone
-        {
-            get
-            {
-                return _idTelefone;
-            }
-            set
-            {
-                OnidTelefoneChanging(value);
-                ReportPropertyChanging("idTelefone");
-                _idTelefone = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idTelefone");
-                OnidTelefoneChanged();
-            }
-        }
-        private global::System.Int32 _idTelefone;
-        partial void OnidTelefoneChanging(global::System.Int32 value);
-        partial void OnidTelefoneChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public Nullable<global::System.Boolean> isPM
@@ -1908,16 +1882,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_EnderecoPessoa", "endereco")]
-        public endereco endereco
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_EnderecoPessoa", "endereco")]
+        public Endereco endereco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.FK_EnderecoPessoa", "endereco").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.FK_EnderecoPessoa", "endereco").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.FK_EnderecoPessoa", "endereco").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.FK_EnderecoPessoa", "endereco").Value = value;
             }
         }
         /// <summary>
@@ -1925,17 +1899,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<endereco> enderecoReference
+        public EntityReference<Endereco> enderecoReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.FK_EnderecoPessoa", "endereco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.FK_EnderecoPessoa", "endereco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<endereco>("sigatModel.FK_EnderecoPessoa", "endereco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Endereco>("SiGATModel.FK_EnderecoPessoa", "endereco", value);
                 }
             }
         }
@@ -1946,56 +1920,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Pessoa_Telefone1", "telefone")]
-        public telefone telefone
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<telefone>("sigatModel.fk_Pessoa_Telefone1", "telefone").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<telefone>("sigatModel.fk_Pessoa_Telefone1", "telefone").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<telefone> telefoneReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<telefone>("sigatModel.fk_Pessoa_Telefone1", "telefone");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<telefone>("sigatModel.fk_Pessoa_Telefone1", "telefone", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_ProprietarioVeiculo", "veiculo")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_ProprietarioVeiculo", "veiculo")]
         public EntityCollection<Veiculo> veiculo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Veiculo>("sigatModel.FK_ProprietarioVeiculo", "veiculo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Veiculo>("SiGATModel.FK_ProprietarioVeiculo", "veiculo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Veiculo>("sigatModel.FK_ProprietarioVeiculo", "veiculo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Veiculo>("SiGATModel.FK_ProprietarioVeiculo", "veiculo", value);
                 }
             }
         }
@@ -2006,18 +1942,40 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "envolvido", "ocorrencia")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Telefone_Pessoa1", "telefone")]
+        public EntityCollection<Telefone> telefone
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Telefone>("SiGATModel.fk_Telefone_Pessoa1", "telefone");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Telefone>("SiGATModel.fk_Telefone_Pessoa1", "telefone", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "envolvido", "ocorrencia")]
         public EntityCollection<ocorrencia> ocorrencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("sigatModel.envolvido", "ocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("SiGATModel.envolvido", "ocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("sigatModel.envolvido", "ocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("SiGATModel.envolvido", "ocorrencia", value);
                 }
             }
         }
@@ -2028,18 +1986,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "pmocorrencia", "ocorrencia")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "pmocorrencia", "ocorrencia")]
         public EntityCollection<ocorrencia> ocorrencia1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("sigatModel.pmocorrencia", "ocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("SiGATModel.pmocorrencia", "ocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("sigatModel.pmocorrencia", "ocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("SiGATModel.pmocorrencia", "ocorrencia", value);
                 }
             }
         }
@@ -2050,18 +2008,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "pmtrote", "trote")]
-        public EntityCollection<trote> trote
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "pmtrote", "trote")]
+        public EntityCollection<Trote> trote
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<trote>("sigatModel.pmtrote", "trote");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Trote>("SiGATModel.pmtrote", "trote");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<trote>("sigatModel.pmtrote", "trote", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Trote>("SiGATModel.pmtrote", "trote", value);
                 }
             }
         }
@@ -2072,24 +2030,24 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="sinalizacaovia")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="SinalizacaoVia")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class sinalizacaovia : EntityObject
+    public partial class SinalizacaoVia : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new sinalizacaovia object.
+        /// Create a new SinalizacaoVia object.
         /// </summary>
         /// <param name="idSinalizacaoVia">Initial value of the idSinalizacaoVia property.</param>
         /// <param name="descricao">Initial value of the descricao property.</param>
-        public static sinalizacaovia Createsinalizacaovia(global::System.Int32 idSinalizacaoVia, global::System.String descricao)
+        public static SinalizacaoVia CreateSinalizacaoVia(global::System.Int32 idSinalizacaoVia, global::System.String descricao)
         {
-            sinalizacaovia sinalizacaovia = new sinalizacaovia();
-            sinalizacaovia.idSinalizacaoVia = idSinalizacaoVia;
-            sinalizacaovia.descricao = descricao;
-            return sinalizacaovia;
+            SinalizacaoVia sinalizacaoVia = new SinalizacaoVia();
+            sinalizacaoVia.idSinalizacaoVia = idSinalizacaoVia;
+            sinalizacaoVia.descricao = descricao;
+            return sinalizacaoVia;
         }
 
         #endregion
@@ -2156,18 +2114,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Ocorrencia_sinalizacaoVia1", "ocorrencia")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Ocorrencia_sinalizacaoVia1", "ocorrencia")]
         public EntityCollection<ocorrencia> ocorrencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("sigatModel.fk_Ocorrencia_sinalizacaoVia1", "ocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("SiGATModel.fk_Ocorrencia_sinalizacaoVia1", "ocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("sigatModel.fk_Ocorrencia_sinalizacaoVia1", "ocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("SiGATModel.fk_Ocorrencia_sinalizacaoVia1", "ocorrencia", value);
                 }
             }
         }
@@ -2178,21 +2136,23 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="telefone")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="Telefone")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class telefone : EntityObject
+    public partial class Telefone : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new telefone object.
+        /// Create a new Telefone object.
         /// </summary>
         /// <param name="idTelefone">Initial value of the idTelefone property.</param>
-        public static telefone Createtelefone(global::System.Int32 idTelefone)
+        /// <param name="idPessoa">Initial value of the idPessoa property.</param>
+        public static Telefone CreateTelefone(global::System.Int32 idTelefone, global::System.Int32 idPessoa)
         {
-            telefone telefone = new telefone();
+            Telefone telefone = new Telefone();
             telefone.idTelefone = idTelefone;
+            telefone.idPessoa = idPessoa;
             return telefone;
         }
 
@@ -2225,6 +2185,30 @@ namespace SiGAT.Models
         private global::System.Int32 _idTelefone;
         partial void OnidTelefoneChanging(global::System.Int32 value);
         partial void OnidTelefoneChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idPessoa
+        {
+            get
+            {
+                return _idPessoa;
+            }
+            set
+            {
+                OnidPessoaChanging(value);
+                ReportPropertyChanging("idPessoa");
+                _idPessoa = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idPessoa");
+                OnidPessoaChanged();
+            }
+        }
+        private global::System.Int32 _idPessoa;
+        partial void OnidPessoaChanging(global::System.Int32 value);
+        partial void OnidPessoaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2284,18 +2268,34 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Pessoa_Telefone1", "pessoa")]
-        public EntityCollection<Pessoa> pessoa
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Telefone_Pessoa1", "pessoa")]
+        public Pessoa pessoa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("sigatModel.fk_Pessoa_Telefone1", "pessoa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("SiGATModel.fk_Telefone_Pessoa1", "pessoa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("SiGATModel.fk_Telefone_Pessoa1", "pessoa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Pessoa> pessoaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("SiGATModel.fk_Telefone_Pessoa1", "pessoa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("sigatModel.fk_Pessoa_Telefone1", "pessoa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Pessoa>("SiGATModel.fk_Telefone_Pessoa1", "pessoa", value);
                 }
             }
         }
@@ -2306,22 +2306,22 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="tipoocorrencia")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="TipoOcorrencia")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class tipoocorrencia : EntityObject
+    public partial class TipoOcorrencia : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new tipoocorrencia object.
+        /// Create a new TipoOcorrencia object.
         /// </summary>
         /// <param name="idTipoOcorrencia">Initial value of the idTipoOcorrencia property.</param>
-        public static tipoocorrencia Createtipoocorrencia(global::System.Int32 idTipoOcorrencia)
+        public static TipoOcorrencia CreateTipoOcorrencia(global::System.Int32 idTipoOcorrencia)
         {
-            tipoocorrencia tipoocorrencia = new tipoocorrencia();
-            tipoocorrencia.idTipoOcorrencia = idTipoOcorrencia;
-            return tipoocorrencia;
+            TipoOcorrencia tipoOcorrencia = new TipoOcorrencia();
+            tipoOcorrencia.idTipoOcorrencia = idTipoOcorrencia;
+            return tipoOcorrencia;
         }
 
         #endregion
@@ -2388,18 +2388,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Ocorrencia_TipoOcorrencia1", "ocorrencia")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Ocorrencia_TipoOcorrencia1", "ocorrencia")]
         public EntityCollection<ocorrencia> ocorrencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("sigatModel.fk_Ocorrencia_TipoOcorrencia1", "ocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("SiGATModel.fk_Ocorrencia_TipoOcorrencia1", "ocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("sigatModel.fk_Ocorrencia_TipoOcorrencia1", "ocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("SiGATModel.fk_Ocorrencia_TipoOcorrencia1", "ocorrencia", value);
                 }
             }
         }
@@ -2410,23 +2410,23 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="trote")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="Trote")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class trote : EntityObject
+    public partial class Trote : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new trote object.
+        /// Create a new Trote object.
         /// </summary>
         /// <param name="idTrote">Initial value of the idTrote property.</param>
         /// <param name="data">Initial value of the data property.</param>
         /// <param name="telfoneRequisitante">Initial value of the telfoneRequisitante property.</param>
         /// <param name="deslocouViatura">Initial value of the deslocouViatura property.</param>
-        public static trote Createtrote(global::System.Int32 idTrote, global::System.DateTime data, global::System.String telfoneRequisitante, global::System.Boolean deslocouViatura)
+        public static Trote CreateTrote(global::System.Int32 idTrote, global::System.DateTime data, global::System.String telfoneRequisitante, global::System.Boolean deslocouViatura)
         {
-            trote trote = new trote();
+            Trote trote = new Trote();
             trote.idTrote = idTrote;
             trote.data = data;
             trote.telfoneRequisitante = telfoneRequisitante;
@@ -2541,24 +2541,24 @@ namespace SiGAT.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Endereco_idendereco
+        public Nullable<global::System.Int32> idEndereco
         {
             get
             {
-                return _Endereco_idendereco;
+                return _idEndereco;
             }
             set
             {
-                OnEndereco_idenderecoChanging(value);
-                ReportPropertyChanging("Endereco_idendereco");
-                _Endereco_idendereco = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Endereco_idendereco");
-                OnEndereco_idenderecoChanged();
+                OnidEnderecoChanging(value);
+                ReportPropertyChanging("idEndereco");
+                _idEndereco = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idEndereco");
+                OnidEnderecoChanged();
             }
         }
-        private Nullable<global::System.Int32> _Endereco_idendereco;
-        partial void OnEndereco_idenderecoChanging(Nullable<global::System.Int32> value);
-        partial void OnEndereco_idenderecoChanged();
+        private Nullable<global::System.Int32> _idEndereco;
+        partial void OnidEnderecoChanging(Nullable<global::System.Int32> value);
+        partial void OnidEnderecoChanged();
 
         #endregion
     
@@ -2570,16 +2570,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "fk_Trote_Endereco1", "endereco")]
-        public endereco endereco
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "fk_Trote_Endereco1", "endereco")]
+        public Endereco endereco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.fk_Trote_Endereco1", "endereco").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.fk_Trote_Endereco1", "endereco").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.fk_Trote_Endereco1", "endereco").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.fk_Trote_Endereco1", "endereco").Value = value;
             }
         }
         /// <summary>
@@ -2587,17 +2587,17 @@ namespace SiGAT.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<endereco> enderecoReference
+        public EntityReference<Endereco> enderecoReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<endereco>("sigatModel.fk_Trote_Endereco1", "endereco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereco>("SiGATModel.fk_Trote_Endereco1", "endereco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<endereco>("sigatModel.fk_Trote_Endereco1", "endereco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Endereco>("SiGATModel.fk_Trote_Endereco1", "endereco", value);
                 }
             }
         }
@@ -2608,18 +2608,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "pmtrote", "pessoa")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "pmtrote", "pessoa")]
         public EntityCollection<Pessoa> pessoa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("sigatModel.pmtrote", "pessoa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Pessoa>("SiGATModel.pmtrote", "pessoa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("sigatModel.pmtrote", "pessoa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Pessoa>("SiGATModel.pmtrote", "pessoa", value);
                 }
             }
         }
@@ -2630,7 +2630,7 @@ namespace SiGAT.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="sigatModel", Name="Veiculo")]
+    [EdmEntityTypeAttribute(NamespaceName="SiGATModel", Name="Veiculo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Veiculo : EntityObject
@@ -2862,16 +2862,16 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "FK_ProprietarioVeiculo", "pessoa")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "FK_ProprietarioVeiculo", "pessoa")]
         public Pessoa pessoa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("sigatModel.FK_ProprietarioVeiculo", "pessoa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("SiGATModel.FK_ProprietarioVeiculo", "pessoa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("sigatModel.FK_ProprietarioVeiculo", "pessoa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("SiGATModel.FK_ProprietarioVeiculo", "pessoa").Value = value;
             }
         }
         /// <summary>
@@ -2883,13 +2883,13 @@ namespace SiGAT.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("sigatModel.FK_ProprietarioVeiculo", "pessoa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Pessoa>("SiGATModel.FK_ProprietarioVeiculo", "pessoa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Pessoa>("sigatModel.FK_ProprietarioVeiculo", "pessoa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Pessoa>("SiGATModel.FK_ProprietarioVeiculo", "pessoa", value);
                 }
             }
         }
@@ -2900,18 +2900,18 @@ namespace SiGAT.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("sigatModel", "veiculoocorrencia", "ocorrencia")]
+        [EdmRelationshipNavigationPropertyAttribute("SiGATModel", "veiculoocorrencia", "ocorrencia")]
         public EntityCollection<ocorrencia> ocorrencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("sigatModel.veiculoocorrencia", "ocorrencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ocorrencia>("SiGATModel.veiculoocorrencia", "ocorrencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("sigatModel.veiculoocorrencia", "ocorrencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ocorrencia>("SiGATModel.veiculoocorrencia", "ocorrencia", value);
                 }
             }
         }
