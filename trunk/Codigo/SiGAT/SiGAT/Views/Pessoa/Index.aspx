@@ -61,7 +61,7 @@
             <%: Html.DisplayFor(modelItem => item.endereco.logradouro) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.telefone.numero) %>
+            <%: Html.DisplayFor(modelItem => item.telefone) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.isPM) %>

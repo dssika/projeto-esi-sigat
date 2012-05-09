@@ -7,7 +7,8 @@ using SiGAT.Models.Dados;
 namespace SiGAT.Models.Negocio
 {
     public class NegocioPessoa
-    {       private readonly IRepositorioGenerico<Pessoa, SiGATEntities> repositorioPessoa;
+    {
+        private readonly IRepositorioGenerico<Pessoa, SiGATEntities> repositorioPessoa;
 
         public NegocioPessoa()
         {
@@ -16,6 +17,7 @@ namespace SiGAT.Models.Negocio
 
         public bool Inserir(Pessoa pessoa)
         {
+
             repositorioPessoa.Inserir(pessoa);
             return repositorioPessoa.SaveChanges() > 0;
         }
@@ -41,6 +43,12 @@ namespace SiGAT.Models.Negocio
         public Pessoa Obter(int codPessoa)
         {
             return repositorioPessoa.ObterEntidade(pessoa => pessoa.idPessoa == codPessoa);
+        }
+
+
+        public bool InserirEndereco(Endereco endereco)
+        {
+            return repositorioPessoa.SaveChanges() > 0;
         }
     }
 }

@@ -17,6 +17,14 @@
         <legend>Pessoa</legend>
 
         <div class="editor-label">
+            <%: Html.LabelFor(model => model.nome) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.nome) %>
+            <%: Html.ValidationMessageFor(model => model.nome) %>
+        </div>
+
+        <div class="editor-label">
             <%: Html.LabelFor(model => model.cnh) %>
         </div>
         <div class="editor-field">
@@ -30,14 +38,6 @@
         <div class="editor-field">
             <%: Html.EditorFor(model => model.cpf) %>
             <%: Html.ValidationMessageFor(model => model.cpf) %>
-        </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.nome) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.nome) %>
-            <%: Html.ValidationMessageFor(model => model.nome) %>
         </div>
 
         <div class="editor-label">
@@ -56,13 +56,50 @@
             <%: Html.ValidationMessageFor(model => model.dataNascimento) %>
         </div>
 
+        <fieldset>
+        <legend>endereco</legend>
+
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idEndereco, "endereco") %>
+            <%: Html.LabelFor(model => model.endereco.logradouro) %>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownList("idEndereco", String.Empty) %>
-            <%: Html.ValidationMessageFor(model => model.idEndereco) %>
+            <%: Html.EditorFor(model => model.endereco.logradouro) %>
+            <%: Html.ValidationMessageFor(model => model.endereco.logradouro)%>
         </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.endereco.bairro)%>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.endereco.bairro)%>
+            <%: Html.ValidationMessageFor(model => model.endereco.bairro)%>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.endereco.cep)%>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.endereco.cep)%>
+            <%: Html.ValidationMessageFor(model => model.endereco.cep)%>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.endereco.cidade.idEstado, "Estado")%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownList("idEstado", "Selecione um estado")%>
+            <%: Html.ValidationMessageFor(model => model.endereco.cidade.idEstado)%>
+        </div>
+        
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.endereco.idCidade, "Cidade")%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownList("idCidade", String.Empty) %>
+            <%: Html.ValidationMessageFor(model => model.endereco.idCidade)%>
+        </div>
+    </fieldset>
+
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.idTelefone, "telefone") %>

@@ -6,19 +6,22 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SiGAT.Models;
+using SiGAT.Models.Negocio;
 
 namespace SiGAT.Controllers
-{ 
+{
     public class PessoaController : Controller
     {
         private SiGATEntities db = new SiGATEntities();
+        private NegocioPessoa negocioPessoa = new NegocioPessoa();
+        private NegocioEndereco negocioEndereco = new NegocioEndereco();
 
         //
         // GET: /Pessoa/
 
         public ViewResult Index()
         {
-            var pessoa = db.pessoa.Include("endereco").Include("telefone");
+            var pessoa = db.PessoaSet.Include("endereco").Include("telefone");
             return View(pessoa.ToList());
         }
 
@@ -27,7 +30,7 @@ namespace SiGAT.Controllers
 
         public ViewResult Details(int id)
         {
-            Pessoa pessoa = db.pessoa.Single(p => p.idPessoa == id);
+            Pessoa pessoa = negocioPessoa.Obter(id);
             return View(pessoa);
         }
 
@@ -36,10 +39,12 @@ namespace SiGAT.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.idEndereco = new SelectList(db.endereco, "idEndereco", "logradouro");
-            ViewBag.idTelefone = new SelectList(db.telefone, "idTelefone", "idTelefone");
+            ViewBag.idEstado = new SelectList(negocioEndereco.ObterEstados().ToList(), "idEstado", "Nome");
+            ViewBag.idCidade = new SelectList(negocioEndereco.ObterCidades().ToList(), "idCidade", "Nome");
+            //ViewBag.idEndereco = new SelectList(db.endereco, "idEndereco", "logradouro");
+            //ViewBag.idTelefone = new SelectList(db.TelefoneSet, "idTelefone", "idTelefone");
             return View();
-        } 
+        }
 
         //
         // POST: /Pessoa/Create
@@ -49,24 +54,24 @@ namespace SiGAT.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.pessoa.AddObject(pessoa);
-                db.SaveChanges();
-                return RedirectToAction("Index");  
+                negocioPessoa.Inserir(pessoa);
+
+                return RedirectToAction("Index");
             }
 
-            ViewBag.idEndereco = new SelectList(db.endereco, "idEndereco", "logradouro", pessoa.idEndereco);
-            ViewBag.idTelefone = new SelectList(db.telefone, "idTelefone", "idTelefone", pessoa.idTelefone);
+            ViewBag.idEndereco = new SelectList(db.EnderecoSet, "idEndereco", "logradouro", pessoa.idEndereco);
+            //ViewBag.idTelefone = new SelectList(db.TelefoneSet, "idTelefone", "idTelefone", pessoa.idTelefone);
             return View(pessoa);
         }
-        
+
         //
         // GET: /Pessoa/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
-            Pessoa pessoa = db.pessoa.Single(p => p.idPessoa == id);
-            ViewBag.idEndereco = new SelectList(db.endereco, "idEndereco", "logradouro", pessoa.idEndereco);
-            ViewBag.idTelefone = new SelectList(db.telefone, "idTelefone", "idTelefone", pessoa.idTelefone);
+            Pessoa pessoa = negocioPessoa.Obter(id);
+            //ViewBag.idEndereco = new SelectList(db.endereco, "idEndereco", "logradouro", pessoa.idEndereco);
+            //ViewBag.idTelefone = new SelectList(db.telefone, "idTelefone", "idTelefone", pessoa.idTelefone);
             return View(pessoa);
         }
 
@@ -78,22 +83,20 @@ namespace SiGAT.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.pessoa.Attach(pessoa);
-                db.ObjectStateManager.ChangeObjectState(pessoa, EntityState.Modified);
-                db.SaveChanges();
+                negocioPessoa.Editar(pessoa);
                 return RedirectToAction("Index");
             }
-            ViewBag.idEndereco = new SelectList(db.endereco, "idEndereco", "logradouro", pessoa.idEndereco);
-            ViewBag.idTelefone = new SelectList(db.telefone, "idTelefone", "idTelefone", pessoa.idTelefone);
+            //ViewBag.idEndereco = new SelectList(db.EnderecoSet, "idEndereco", "logradouro", pessoa.idEndereco);
+            //ViewBag.idTelefone = new SelectList(db.TelefoneSet, "idTelefone", "idTelefone", pessoa.idTelefone);
             return View(pessoa);
         }
 
         //
         // GET: /Pessoa/Delete/5
- 
+
         public ActionResult Delete(int id)
         {
-            Pessoa pessoa = db.pessoa.Single(p => p.idPessoa == id);
+            Pessoa pessoa = negocioPessoa.Obter(id);
             return View(pessoa);
         }
 
@@ -102,17 +105,10 @@ namespace SiGAT.Controllers
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
-        {            
-            Pessoa pessoa = db.pessoa.Single(p => p.idPessoa == id);
-            db.pessoa.DeleteObject(pessoa);
-            db.SaveChanges();
+        {
+            negocioPessoa.Remover(id);
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }
     }
 }
