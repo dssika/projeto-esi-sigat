@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SiGATModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="SiGATModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="SiGATModelStoreContainer">
           <EntitySet Name="cidade" EntityType="SiGATModel.Store.cidade" store:Type="Tables" Schema="sigat" />
           <EntitySet Name="condicaotempo" EntityType="SiGATModel.Store.condicaotempo" store:Type="Tables" Schema="sigat" />
@@ -231,7 +231,7 @@
           <Property Name="placa" Type="char" Nullable="false" MaxLength="7" />
           <Property Name="marca" Type="char" MaxLength="20" />
           <Property Name="modelo" Type="char" MaxLength="30" />
-          <Property Name="anoFabricacao" Type="date" />
+          <Property Name="anoFabricacao" Type="int" />
           <Property Name="tipo" Type="char" MaxLength="20" />
           <Property Name="idProprietario" Type="int" Nullable="false" />
         </EntityType>
@@ -471,8 +471,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SiGATModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -686,7 +685,7 @@
           <Property Name="placa" Type="String" Nullable="false" />
           <Property Name="marca" Type="String" />
           <Property Name="modelo" Type="String" />
-          <Property Name="anoFabricacao" Type="DateTime" />
+          <Property Name="anoFabricacao" Type="Int32" />
           <Property Name="tipo" Type="String" />
           <Property Name="idProprietario" Type="Int32" Nullable="false" />
           <NavigationProperty Name="pessoa" Relationship="SiGATModel.FK_ProprietarioVeiculo" FromRole="veiculo" ToRole="pessoa" />
@@ -983,7 +982,7 @@
         <EntityTypeShape EntityType="SiGATModel.ocorrencia" Width="1.5" PointX="5.5" PointY="3.5" Height="4.2879036458333335" IsExpanded="true" />
         <EntityTypeShape EntityType="SiGATModel.Pessoa" Width="1.5" PointX="10.75" PointY="2.625" Height="2.5571907552083326" IsExpanded="true" />
         <EntityTypeShape EntityType="SiGATModel.SinalizacaoVia" Width="1.5" PointX="6.375" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="SiGATModel.Telefone" Width="1.5" PointX="10.625" PointY="6.25" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.Telefone" Width="1.5" PointX="10.75" PointY="7.25" Height="1.9802864583333317" IsExpanded="true" />
         <EntityTypeShape EntityType="SiGATModel.TipoOcorrencia" Width="1.5" PointX="8.125" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="SiGATModel.Trote" Width="1.5" PointX="12.875" PointY="2.125" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="SiGATModel.Veiculo" Width="1.5" PointX="8.375" PointY="4.25" Height="2.9417936197916674" IsExpanded="true" />
@@ -1030,8 +1029,8 @@
           <ConnectorPoint PointX="9.875" PointY="4.7160953776041659" />
         </AssociationConnector>
         <AssociationConnector Association="SiGATModel.fk_Telefone_Pessoa1" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.4375" PointY="5.1821907552083326" />
-          <ConnectorPoint PointX="11.4375" PointY="6.25" />
+          <ConnectorPoint PointX="11.5" PointY="6.3359993489583326" />
+          <ConnectorPoint PointX="11.5" PointY="7.25" />
         </AssociationConnector>
         <AssociationConnector Association="SiGATModel.envolvido" ManuallyRouted="false">
           <ConnectorPoint PointX="7" PointY="3.84375" />

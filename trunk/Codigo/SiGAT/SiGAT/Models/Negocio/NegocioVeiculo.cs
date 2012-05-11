@@ -17,6 +17,7 @@ namespace SiGAT.Models.Negocio
 
         public bool Inserir(Veiculo veiculo)
         {
+            veiculo.idProprietario = (Int32) veiculo.idProprietario;
             repositorioVeiculo.Inserir(veiculo);
             return repositorioVeiculo.SaveChanges() > 0;
         }
@@ -24,6 +25,13 @@ namespace SiGAT.Models.Negocio
         {
             Veiculo _veiculo = Obter(veiculo.idVeiculo);
             _veiculo.renavan = veiculo.renavan;
+            _veiculo.placa = veiculo.placa;
+            _veiculo.marca = veiculo.marca;
+            _veiculo.modelo = veiculo.modelo;
+            _veiculo.anoFabricacao = veiculo.anoFabricacao;
+            _veiculo.tipo = veiculo.tipo;
+            _veiculo.idProprietario = veiculo.idProprietario;
+
             return repositorioVeiculo.SaveChanges() > 0;
         }
 

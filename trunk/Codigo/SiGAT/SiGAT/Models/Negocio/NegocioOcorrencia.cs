@@ -7,5 +7,6 @@ namespace SiGAT.Models.Negocio
 {
     public class NegocioOcorrencia
     {
+        // TODO: Criar a classe de negocio de ocorrencia
     }
 }

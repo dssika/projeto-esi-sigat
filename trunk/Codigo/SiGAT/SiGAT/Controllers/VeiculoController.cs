@@ -13,6 +13,7 @@ namespace SiGAT.Controllers
     public class VeiculoController : Controller
     {
         private NegocioVeiculo negocioveiculo = new NegocioVeiculo();
+        private NegocioPessoa negociopessoa = new NegocioPessoa();
 
         //
         // GET: /Veiculo/
@@ -36,7 +37,7 @@ namespace SiGAT.Controllers
 
         public ActionResult Create()
         {
-            //ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome");
+            ViewBag.idProprietario = new SelectList(negociopessoa.ObterTodos().ToList(), "idPessoa", "nome");
             return View();
         } 
 
@@ -52,6 +53,7 @@ namespace SiGAT.Controllers
                 return RedirectToAction("Index");  
             }
 
+            ViewBag.idProprietario = new SelectList(negociopessoa.ObterTodos().ToList(), "idPessoa", "nome",veiculo.idProprietario);
             //ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome", veiculo.idProprietario);
             return View(veiculo);
         }
@@ -63,6 +65,7 @@ namespace SiGAT.Controllers
         {
             
             Veiculo veiculo = negocioveiculo.Obter(id);
+            ViewBag.idProprietario = new SelectList(negociopessoa.ObterTodos().ToList(), "idPessoa", "nome", veiculo.idProprietario);
             return View(veiculo);
         }
 
@@ -77,6 +80,7 @@ namespace SiGAT.Controllers
                 negocioveiculo.Editar(veiculo);
                 return RedirectToAction("Index");
             }
+            ViewBag.idProprietario = new SelectList(negociopessoa.ObterTodos().ToList(), "idPessoa", "nome", veiculo.idProprietario);
             //ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome", veiculo.idProprietario);
             return View(veiculo);
         }
