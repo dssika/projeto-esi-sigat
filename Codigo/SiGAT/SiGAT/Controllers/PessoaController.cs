@@ -14,7 +14,6 @@ namespace SiGAT.Controllers
     {
         private SiGATEntities db = new SiGATEntities();
         private NegocioPessoa negocioPessoa = new NegocioPessoa();
-        private NegocioEndereco negocioEndereco = new NegocioEndereco();
 
         //
         // GET: /Pessoa/

@@ -2785,7 +2785,7 @@ namespace SiGAT.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> anoFabricacao
+        public Nullable<global::System.Int32> anoFabricacao
         {
             get
             {
@@ -2800,8 +2800,8 @@ namespace SiGAT.Models
                 OnanoFabricacaoChanged();
             }
         }
-        private Nullable<global::System.DateTime> _anoFabricacao;
-        partial void OnanoFabricacaoChanging(Nullable<global::System.DateTime> value);
+        private Nullable<global::System.Int32> _anoFabricacao;
+        partial void OnanoFabricacaoChanging(Nullable<global::System.Int32> value);
         partial void OnanoFabricacaoChanged();
     
         /// <summary>

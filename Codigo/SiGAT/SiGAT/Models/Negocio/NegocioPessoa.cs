@@ -10,14 +10,19 @@ namespace SiGAT.Models.Negocio
     {
         private readonly IRepositorioGenerico<Pessoa, SiGATEntities> repositorioPessoa;
 
+        private readonly IRepositorioGenerico<Endereco, SiGATEntities> repositorioEndereco;
+
         public NegocioPessoa()
         {
             repositorioPessoa = new RepositorioGenerico<Pessoa, SiGATEntities>("chave");
+            repositorioEndereco = new RepositorioGenerico<Endereco, SiGATEntities>("chave");
+
         }
 
         public bool Inserir(Pessoa pessoa)
         {
-
+            Endereco endereco = pessoa.endereco;
+            pessoa.endereco = repositorioEndereco.Inserir(endereco);
             repositorioPessoa.Inserir(pessoa);
             return repositorioPessoa.SaveChanges() > 0;
         }
