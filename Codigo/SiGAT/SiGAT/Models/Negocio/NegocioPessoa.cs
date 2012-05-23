@@ -24,7 +24,7 @@ namespace SiGAT.Models.Negocio
             Endereco endereco = pessoa.endereco;
             pessoa.endereco = repositorioEndereco.Inserir(endereco);
             Telefone telefone = new Telefone();
-            telefone = pessoa.telefone;
+            //telefone = pessoa.telefone;
             repositirioTelefone.Inserir(telefone);
             
             //repositorioPessoa.Inserir(pessoa);
