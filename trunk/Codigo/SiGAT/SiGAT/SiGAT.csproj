@@ -67,6 +67,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
+    <Compile Include="Controllers\TelefoneController.cs" />
     <Compile Include="Controllers\VeiculoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -75,6 +76,7 @@
     <Compile Include="Models\Dados\IRepositorioGenerico.cs" />
     <Compile Include="Models\Dados\ObjectContextFactory.cs" />
     <Compile Include="Models\Dados\RepositorioGenerico.cs" />
+    <Compile Include="Models\Negocio\NegocioEndereco.cs" />
     <Compile Include="Models\Negocio\NegocioOcorrencia.cs" />
     <Compile Include="Models\Negocio\NegocioPessoa.cs" />
     <Compile Include="Models\Negocio\NegocioTrote.cs" />
@@ -130,6 +132,11 @@
     <Content Include="Views\Pessoa\Details.aspx" />
     <Content Include="Views\Pessoa\Edit.aspx" />
     <Content Include="Views\Pessoa\Index.aspx" />
+    <Content Include="Views\Telefone\Create.aspx" />
+    <Content Include="Views\Telefone\Delete.aspx" />
+    <Content Include="Views\Telefone\Details.aspx" />
+    <Content Include="Views\Telefone\Edit.aspx" />
+    <Content Include="Views\Telefone\Index.aspx" />
     <Content Include="Views\Veiculo\Create.aspx" />
     <Content Include="Views\Veiculo\Delete.aspx" />
     <Content Include="Views\Veiculo\Details.aspx" />

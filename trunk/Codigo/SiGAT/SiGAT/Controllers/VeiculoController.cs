@@ -47,13 +47,13 @@ namespace SiGAT.Controllers
         [HttpPost]
         public ActionResult Create(Veiculo veiculo)
         {
+            ViewBag.idProprietario = new SelectList(negociopessoa.ObterTodos().ToList(), "idPessoa", "nome", veiculo.idProprietario);
             if (ModelState.IsValid)
             {
                 negocioveiculo.Inserir(veiculo);
                 return RedirectToAction("Index");  
             }
 
-            ViewBag.idProprietario = new SelectList(negociopessoa.ObterTodos().ToList(), "idPessoa", "nome",veiculo.idProprietario);
             //ViewBag.idProprietario = new SelectList(db.pessoa, "idPessoa", "nome", veiculo.idProprietario);
             return View(veiculo);
         }

@@ -20,10 +20,14 @@ namespace SiGAT.Models.Negocio
             repositorioCidade = new RepositorioGenerico<Cidade, SiGATEntities>("chave");
         }
 
-        public bool Inserir(Endereco endereco)
+        public Endereco Inserir(Endereco endereco)
         {
             repositorioEndereco.Inserir(endereco);
-            return repositorioEndereco.SaveChanges() > 0;
+
+            if (repositorioEndereco.SaveChanges() > 0)
+                return endereco;
+            else
+                return null;
         }
         public bool Editar(Endereco endereco)
         {
@@ -54,9 +58,7 @@ namespace SiGAT.Models.Negocio
 
         public List<Cidade> ObterCidadePorEstado(int codEstado)
         {
-            IQueryable<Cidade> cidades = repositorioCidade.GetQueryable().Where(cidade => cidade.idEstado = codEstado);
-
-            return cidades.ToList();
+            return null;
         }
 
     }

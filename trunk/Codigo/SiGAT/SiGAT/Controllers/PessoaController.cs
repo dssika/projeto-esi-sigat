@@ -12,16 +12,16 @@ namespace SiGAT.Controllers
 {
     public class PessoaController : Controller
     {
-        private SiGATEntities db = new SiGATEntities();
         private NegocioPessoa negocioPessoa = new NegocioPessoa();
+        private NegocioEndereco negocioEndereco = new NegocioEndereco();
 
         //
         // GET: /Pessoa/
 
         public ViewResult Index()
         {
-            var pessoa = db.PessoaSet.Include("endereco").Include("telefone");
-            return View(pessoa.ToList());
+            
+            return View(negocioPessoa.ObterTodos().ToList());
         }
 
         //
@@ -40,8 +40,6 @@ namespace SiGAT.Controllers
         {
             ViewBag.idEstado = new SelectList(negocioEndereco.ObterEstados().ToList(), "idEstado", "Nome");
             ViewBag.idCidade = new SelectList(negocioEndereco.ObterCidades().ToList(), "idCidade", "Nome");
-            //ViewBag.idEndereco = new SelectList(db.endereco, "idEndereco", "logradouro");
-            //ViewBag.idTelefone = new SelectList(db.TelefoneSet, "idTelefone", "idTelefone");
             return View();
         }
 
@@ -58,8 +56,8 @@ namespace SiGAT.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.idEndereco = new SelectList(db.EnderecoSet, "idEndereco", "logradouro", pessoa.idEndereco);
-            //ViewBag.idTelefone = new SelectList(db.TelefoneSet, "idTelefone", "idTelefone", pessoa.idTelefone);
+            ViewBag.idEstado = new SelectList(negocioEndereco.ObterEstados().ToList(), "idEstado", "Nome");
+            ViewBag.idCidade = new SelectList(negocioEndereco.ObterCidades().ToList(), "idCidade", "Nome", pessoa.endereco.idCidade);
             return View(pessoa);
         }
 
@@ -69,8 +67,6 @@ namespace SiGAT.Controllers
         public ActionResult Edit(int id)
         {
             Pessoa pessoa = negocioPessoa.Obter(id);
-            //ViewBag.idEndereco = new SelectList(db.endereco, "idEndereco", "logradouro", pessoa.idEndereco);
-            //ViewBag.idTelefone = new SelectList(db.telefone, "idTelefone", "idTelefone", pessoa.idTelefone);
             return View(pessoa);
         }
 
@@ -85,8 +81,6 @@ namespace SiGAT.Controllers
                 negocioPessoa.Editar(pessoa);
                 return RedirectToAction("Index");
             }
-            //ViewBag.idEndereco = new SelectList(db.EnderecoSet, "idEndereco", "logradouro", pessoa.idEndereco);
-            //ViewBag.idTelefone = new SelectList(db.TelefoneSet, "idTelefone", "idTelefone", pessoa.idTelefone);
             return View(pessoa);
         }
 
