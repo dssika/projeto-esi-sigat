@@ -9,23 +9,36 @@ namespace SiGAT.Models.Negocio
     public class NegocioPessoa
     {
         private readonly IRepositorioGenerico<Pessoa, SiGATEntities> repositorioPessoa;
-
+        private readonly IRepositorioGenerico<Telefone, SiGATEntities> repositirioTelefone;
         private readonly IRepositorioGenerico<Endereco, SiGATEntities> repositorioEndereco;
 
         public NegocioPessoa()
         {
             repositorioPessoa = new RepositorioGenerico<Pessoa, SiGATEntities>("chave");
             repositorioEndereco = new RepositorioGenerico<Endereco, SiGATEntities>("chave");
-
+            repositirioTelefone = new RepositorioGenerico<Telefone, SiGATEntities>("chave");
         }
 
         public bool Inserir(Pessoa pessoa)
         {
             Endereco endereco = pessoa.endereco;
             pessoa.endereco = repositorioEndereco.Inserir(endereco);
-            repositorioPessoa.Inserir(pessoa);
+            Telefone telefone = new Telefone();
+            telefone = pessoa.telefone;
+            repositirioTelefone.Inserir(telefone);
+            
+            //repositorioPessoa.Inserir(pessoa);
             return repositorioPessoa.SaveChanges() > 0;
         }
+
+        public bool InserirTelefone(Telefone telefone, Int32 idPessoa)
+        {
+            telefone.idPessoa = idPessoa;
+            repositirioTelefone.Inserir(telefone);
+
+            return repositirioTelefone.SaveChanges() > 0;
+        }
+
         public bool Editar(Pessoa pessoa)
         {
             Pessoa _pessoa = Obter(pessoa.idPessoa);
@@ -53,7 +66,8 @@ namespace SiGAT.Models.Negocio
 
         public bool InserirEndereco(Endereco endereco)
         {
-            return repositorioPessoa.SaveChanges() > 0;
+            repositorioEndereco.Inserir(endereco);
+            return repositorioEndereco.SaveChanges() > 0;
         }
     }
 }

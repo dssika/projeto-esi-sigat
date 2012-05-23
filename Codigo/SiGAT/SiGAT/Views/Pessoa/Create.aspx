@@ -99,6 +99,24 @@
             <%: Html.ValidationMessageFor(model => model.endereco.idCidade)%>
         </div>
     </fieldset>
+    <fieldset>
+        <legend>Telefone</legend>
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.ddd) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.ddd) %>
+            <%: Html.ValidationMessageFor(model => model.ddd) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.numero) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.numero) %>
+            <%: Html.ValidationMessageFor(model => model.numero) %>
+        </div>
+    </fieldset>
 
 
         <div class="editor-label">
