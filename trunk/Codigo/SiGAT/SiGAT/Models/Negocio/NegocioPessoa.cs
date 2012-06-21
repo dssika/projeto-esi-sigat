@@ -6,6 +6,7 @@ using SiGAT.Models.Dados;
 
 namespace SiGAT.Models.Negocio
 {
+    /* classe */
     public class NegocioPessoa
     {
         private readonly IRepositorioGenerico<Pessoa, SiGATEntities> repositorioPessoa;
