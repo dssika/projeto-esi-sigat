@@ -24,6 +24,7 @@
                     <li><%: Html.ActionLink("Veiculo", "Index", "Veiculo")%></li>
                     <li><%: Html.ActionLink("Pessoa", "Index","Pessoa") %></li>
                     <li><%: Html.ActionLink("Ocorrencia", "Index","Ocorrencia") %></li>
+                    <li><%: Html.ActionLink("Trote","Index","Trote") %></li>
                 </ul>
             </nav>
         </header>

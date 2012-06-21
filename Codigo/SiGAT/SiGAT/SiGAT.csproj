@@ -68,6 +68,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\TelefoneController.cs" />
+    <Compile Include="Controllers\TroteController.cs" />
     <Compile Include="Controllers\VeiculoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -137,6 +138,11 @@
     <Content Include="Views\Telefone\Details.aspx" />
     <Content Include="Views\Telefone\Edit.aspx" />
     <Content Include="Views\Telefone\Index.aspx" />
+    <Content Include="Views\Trote\Create.aspx" />
+    <Content Include="Views\Trote\Delete.aspx" />
+    <Content Include="Views\Trote\Details.aspx" />
+    <Content Include="Views\Trote\Edit.aspx" />
+    <Content Include="Views\Trote\Index.aspx" />
     <Content Include="Views\Veiculo\Create.aspx" />
     <Content Include="Views\Veiculo\Delete.aspx" />
     <Content Include="Views\Veiculo\Details.aspx" />
