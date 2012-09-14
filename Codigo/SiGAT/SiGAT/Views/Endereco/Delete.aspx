@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<SiGAT.Models.endereco>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<SiGAT.Models.Endereco>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Delete
@@ -10,7 +10,7 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <fieldset>
-    <legend>endereco</legend>
+    <legend>Endereco</legend>
 
     <div class="display-label">logradouro</div>
     <div class="display-field">

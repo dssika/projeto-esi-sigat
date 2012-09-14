@@ -44,7 +44,7 @@
 
     <div class="display-label">telefone</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.telefone.idTelefone) %>
+        <%: Html.DisplayFor(model => model.telefone) %>
     </div>
 
     <div class="display-label">isPM</div>

@@ -18,8 +18,8 @@ namespace SiGAT.Controllers
 
         public ViewResult Index()
         {
-            var endereco = db.endereco.Include("cidade");
-            return View(endereco.ToList());
+            var enderecoset = db.EnderecoSet.Include("cidade");
+            return View(enderecoset.ToList());
         }
 
         //
@@ -27,7 +27,7 @@ namespace SiGAT.Controllers
 
         public ViewResult Details(int id)
         {
-            endereco endereco = db.endereco.Single(e => e.idEndereco == id);
+            Endereco endereco = db.EnderecoSet.Single(e => e.idEndereco == id);
             return View(endereco);
         }
 
@@ -36,7 +36,7 @@ namespace SiGAT.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.idCidade = new SelectList(db.cidade, "idCidade", "nome");
+            ViewBag.idCidade = new SelectList(db.CidadeSet, "idCidade", "nome");
             return View();
         } 
 
@@ -44,16 +44,16 @@ namespace SiGAT.Controllers
         // POST: /Endereco/Create
 
         [HttpPost]
-        public ActionResult Create(endereco endereco)
+        public ActionResult Create(Endereco endereco)
         {
             if (ModelState.IsValid)
             {
-                db.endereco.AddObject(endereco);
+                db.EnderecoSet.AddObject(endereco);
                 db.SaveChanges();
                 return RedirectToAction("Index");  
             }
 
-            ViewBag.idCidade = new SelectList(db.cidade, "idCidade", "nome", endereco.idCidade);
+            ViewBag.idCidade = new SelectList(db.CidadeSet, "idCidade", "nome", endereco.idCidade);
             return View(endereco);
         }
         
@@ -62,8 +62,8 @@ namespace SiGAT.Controllers
  
         public ActionResult Edit(int id)
         {
-            endereco endereco = db.endereco.Single(e => e.idEndereco == id);
-            ViewBag.idCidade = new SelectList(db.cidade, "idCidade", "nome", endereco.idCidade);
+            Endereco endereco = db.EnderecoSet.Single(e => e.idEndereco == id);
+            ViewBag.idCidade = new SelectList(db.CidadeSet, "idCidade", "nome", endereco.idCidade);
             return View(endereco);
         }
 
@@ -71,16 +71,16 @@ namespace SiGAT.Controllers
         // POST: /Endereco/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(endereco endereco)
+        public ActionResult Edit(Endereco endereco)
         {
             if (ModelState.IsValid)
             {
-                db.endereco.Attach(endereco);
+                db.EnderecoSet.Attach(endereco);
                 db.ObjectStateManager.ChangeObjectState(endereco, EntityState.Modified);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.idCidade = new SelectList(db.cidade, "idCidade", "nome", endereco.idCidade);
+            ViewBag.idCidade = new SelectList(db.CidadeSet, "idCidade", "nome", endereco.idCidade);
             return View(endereco);
         }
 
@@ -89,7 +89,7 @@ namespace SiGAT.Controllers
  
         public ActionResult Delete(int id)
         {
-            endereco endereco = db.endereco.Single(e => e.idEndereco == id);
+            Endereco endereco = db.EnderecoSet.Single(e => e.idEndereco == id);
             return View(endereco);
         }
 
@@ -99,8 +99,8 @@ namespace SiGAT.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            endereco endereco = db.endereco.Single(e => e.idEndereco == id);
-            db.endereco.DeleteObject(endereco);
+            Endereco endereco = db.EnderecoSet.Single(e => e.idEndereco == id);
+            db.EnderecoSet.DeleteObject(endereco);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

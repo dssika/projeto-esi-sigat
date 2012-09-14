@@ -14,6 +14,7 @@ namespace SiGAT.Controllers
     {
         private NegocioPessoa negocioPessoa = new NegocioPessoa();
         private NegocioEndereco negocioEndereco = new NegocioEndereco();
+        private NegocioTelefone negocioTelefone = new NegocioTelefone();
 
         //
         // GET: /Pessoa/
@@ -40,6 +41,11 @@ namespace SiGAT.Controllers
         {
             ViewBag.idEstado = new SelectList(negocioEndereco.ObterEstados().ToList(), "idEstado", "Nome");
             ViewBag.idCidade = new SelectList(negocioEndereco.ObterCidades().ToList(), "idCidade", "Nome");
+            ViewBag.idTelefone = new SelectList(negocioTelefone.ObterTodos().ToList(), "idTelefone", "numero");
+
+            Console.WriteLine("teste");
+            Console.Read();
+           
             return View();
         }
 
@@ -49,15 +55,18 @@ namespace SiGAT.Controllers
         [HttpPost]
         public ActionResult Create(Pessoa pessoa)
         {
+            ViewBag.idEstado = new SelectList(negocioEndereco.ObterEstados().ToList(), "idEstado", "Nome");
+            ViewBag.idCidade = new SelectList(negocioEndereco.ObterCidades().ToList(), "idCidade", "Nome", pessoa.endereco.idCidade);
+
             if (ModelState.IsValid)
             {
+
+                pessoa.endereco.cidade.idEstado = 2;
+
                 negocioPessoa.Inserir(pessoa);
 
                 return RedirectToAction("Index");
             }
-
-            ViewBag.idEstado = new SelectList(negocioEndereco.ObterEstados().ToList(), "idEstado", "Nome");
-            ViewBag.idCidade = new SelectList(negocioEndereco.ObterCidades().ToList(), "idCidade", "Nome", pessoa.endereco.idCidade);
             return View(pessoa);
         }
 
