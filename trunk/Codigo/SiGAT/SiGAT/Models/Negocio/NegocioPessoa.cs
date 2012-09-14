@@ -20,16 +20,30 @@ namespace SiGAT.Models.Negocio
             repositirioTelefone = new RepositorioGenerico<Telefone, SiGATEntities>("chave");
         }
 
-        public bool Inserir(Pessoa pessoa)
-        {
-            Endereco endereco = pessoa.endereco;
-            pessoa.endereco = repositorioEndereco.Inserir(endereco);
-            Telefone telefone = new Telefone();
-            //telefone = pessoa.telefone;
-            repositirioTelefone.Inserir(telefone);
+//        public bool Inserir(Pessoa pessoa)
+//        {
+//            Endereco endereco = pessoa.endereco;
+//            pessoa.endereco = repositorioEndereco.Inserir(endereco);
+
+//         //   Telefone telefone = new Telefone();
+//            //telefone = pessoa.telefone;
+////            repositirioTelefone.Inserir(telefone);
             
-            //repositorioPessoa.Inserir(pessoa);
-            return repositorioPessoa.SaveChanges() > 0;
+//            //repositorioPessoa.Inserir(pessoa);
+//            return repositorioPessoa.SaveChanges() > 0;
+//        }
+
+
+
+        public Pessoa Inserir(Pessoa pessoa)
+        {
+            pessoa.endereco.idCidade = 1;
+            repositorioPessoa.Inserir(pessoa);
+
+            if (repositorioPessoa.SaveChanges() > 0)
+                return pessoa;
+            else
+                return null;
         }
 
         public bool InserirTelefone(Telefone telefone, Int32 idPessoa)

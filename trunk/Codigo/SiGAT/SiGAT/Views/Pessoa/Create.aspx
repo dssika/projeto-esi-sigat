@@ -16,6 +16,8 @@
     <fieldset>
         <legend>Pessoa</legend>
 
+        <fieldset>
+        <legend>Dados</legend>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.nome) %>
         </div>
@@ -55,7 +57,7 @@
             <%: Html.EditorFor(model => model.dataNascimento) %>
             <%: Html.ValidationMessageFor(model => model.dataNascimento) %>
         </div>
-
+        </fieldset>
         <fieldset>
         <legend>endereco</legend>
 
@@ -102,31 +104,42 @@
     <fieldset>
         <legend>Telefone</legend>
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.ddd) %>
+
+        <%: Html.LabelFor(model => model.telefone) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.ddd) %>
-            <%: Html.ValidationMessageFor(model => model.ddd) %>
+            </div>
+            <!--   mudança 26-08
+            %: Html.LabelFor(model => model.ddd) %>
+        </div-->
+        <div class="editor-field">
+             <%: Html.DropDownList("idTelefone", String.Empty)%>
+            <!--%: Html.ValidationMessageFor(model => model.ddd) %-->
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.numero) %>
+            <!--%: Html.LabelFor(model => model.numero) %-->
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.numero) %>
-            <%: Html.ValidationMessageFor(model => model.numero) %>
+            <!--%: Html.EditorFor(model => model.numero) %-->
+            <!--%: Html.ValidationMessageFor(model => model.numero) %-->
         </div>
     </fieldset>
 
-
+    <fieldset>
+        <legend>PM</legend>
+    
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.isPM) %>
+            <!--%: Html.LabelFor(model => model.isPM, String.Empty) %-->
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.isPM) %>
+            <!--%: Html.EditorFor(model => model.isPM) %-->
+            
+        <%: Html.RadioButtonFor(model => model.isPM, true) %> sim <br />
+        <%: Html.RadioButtonFor(model => model.isPM, false) %> não
             <%: Html.ValidationMessageFor(model => model.isPM) %>
         </div>
-
+        </fieldset>
         <p>
             <input type="submit" value="Create" />
         </p>
