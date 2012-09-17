@@ -67,6 +67,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EnderecoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OcorrenciaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\TelefoneController.cs" />
     <Compile Include="Controllers\TroteController.cs" />
@@ -135,6 +136,11 @@
     <Content Include="Views\Endereco\Details.aspx" />
     <Content Include="Views\Endereco\Edit.aspx" />
     <Content Include="Views\Endereco\Index.aspx" />
+    <Content Include="Views\Ocorrencia\Create.aspx" />
+    <Content Include="Views\Ocorrencia\Delete.aspx" />
+    <Content Include="Views\Ocorrencia\Details.aspx" />
+    <Content Include="Views\Ocorrencia\Edit.aspx" />
+    <Content Include="Views\Ocorrencia\Index.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
     <Content Include="Views\Pessoa\Details.aspx" />
