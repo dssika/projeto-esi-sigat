@@ -61,7 +61,7 @@ namespace SiGAT.Controllers
             if (ModelState.IsValid)
             {
 
-                pessoa.endereco.cidade.idEstado = 2;
+         //       pessoa.endereco.cidade.idEstado = 2;
 
                 negocioPessoa.Inserir(pessoa);
 
