@@ -1,0 +1,1054 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SiGATModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SiGATModelStoreContainer">
+          <EntitySet Name="cidade" EntityType="SiGATModel.Store.cidade" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="condicaotempo" EntityType="SiGATModel.Store.condicaotempo" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="condicaovia" EntityType="SiGATModel.Store.condicaovia" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="endereco" EntityType="SiGATModel.Store.endereco" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="envolvido" EntityType="SiGATModel.Store.envolvido" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="estado" EntityType="SiGATModel.Store.estado" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="ocorrencia" EntityType="SiGATModel.Store.ocorrencia" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="pessoa" EntityType="SiGATModel.Store.pessoa" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="pmocorrencia" EntityType="SiGATModel.Store.pmocorrencia" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="pmtrote" EntityType="SiGATModel.Store.pmtrote" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="sinalizacaovia" EntityType="SiGATModel.Store.sinalizacaovia" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="telefone" EntityType="SiGATModel.Store.telefone" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="tipoocorrencia" EntityType="SiGATModel.Store.tipoocorrencia" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="trote" EntityType="SiGATModel.Store.trote" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="veiculo" EntityType="SiGATModel.Store.veiculo" store:Type="Tables" Schema="sigat" />
+          <EntitySet Name="veiculoocorrencia" EntityType="SiGATModel.Store.veiculoocorrencia" store:Type="Tables" Schema="sigat" />
+          <AssociationSet Name="FK_Cidade" Association="SiGATModel.Store.FK_Cidade">
+            <End Role="cidade" EntitySet="cidade" />
+            <End Role="endereco" EntitySet="endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Endereco" Association="SiGATModel.Store.FK_Endereco">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EnderecoPessoa" Association="SiGATModel.Store.FK_EnderecoPessoa">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="pessoa" EntitySet="pessoa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Estado" Association="SiGATModel.Store.FK_Estado">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="cidade" EntitySet="cidade" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_condicaoTempo1" Association="SiGATModel.Store.fk_Ocorrencia_condicaoTempo1">
+            <End Role="condicaotempo" EntitySet="condicaotempo" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_condicaoVia1" Association="SiGATModel.Store.fk_Ocorrencia_condicaoVia1">
+            <End Role="condicaovia" EntitySet="condicaovia" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_has_Pessoa_Ocorrencia1" Association="SiGATModel.Store.fk_Ocorrencia_has_Pessoa_Ocorrencia1">
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+            <End Role="envolvido" EntitySet="envolvido" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_has_Pessoa_Ocorrencia2" Association="SiGATModel.Store.fk_Ocorrencia_has_Pessoa_Ocorrencia2">
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+            <End Role="pmocorrencia" EntitySet="pmocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_has_Pessoa_Pessoa1" Association="SiGATModel.Store.fk_Ocorrencia_has_Pessoa_Pessoa1">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="envolvido" EntitySet="envolvido" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_has_Pessoa_Pessoa2" Association="SiGATModel.Store.fk_Ocorrencia_has_Pessoa_Pessoa2">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="pmocorrencia" EntitySet="pmocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_has_Veiculo_Ocorrencia1" Association="SiGATModel.Store.fk_Ocorrencia_has_Veiculo_Ocorrencia1">
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+            <End Role="veiculoocorrencia" EntitySet="veiculoocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_has_Veiculo_Veiculo1" Association="SiGATModel.Store.fk_Ocorrencia_has_Veiculo_Veiculo1">
+            <End Role="veiculo" EntitySet="veiculo" />
+            <End Role="veiculoocorrencia" EntitySet="veiculoocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_sinalizacaoVia1" Association="SiGATModel.Store.fk_Ocorrencia_sinalizacaoVia1">
+            <End Role="sinalizacaovia" EntitySet="sinalizacaovia" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_TipoOcorrencia1" Association="SiGATModel.Store.fk_Ocorrencia_TipoOcorrencia1">
+            <End Role="tipoocorrencia" EntitySet="tipoocorrencia" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Pessoa_has_Trote_Pessoa1" Association="SiGATModel.Store.fk_Pessoa_has_Trote_Pessoa1">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="pmtrote" EntitySet="pmtrote" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Pessoa_has_Trote_Trote1" Association="SiGATModel.Store.fk_Pessoa_has_Trote_Trote1">
+            <End Role="trote" EntitySet="trote" />
+            <End Role="pmtrote" EntitySet="pmtrote" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProprietarioVeiculo" Association="SiGATModel.Store.FK_ProprietarioVeiculo">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="veiculo" EntitySet="veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Telefone_Pessoa1" Association="SiGATModel.Store.fk_Telefone_Pessoa1">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="telefone" EntitySet="telefone" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Trote_Endereco1" Association="SiGATModel.Store.fk_Trote_Endereco1">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="trote" EntitySet="trote" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="cidade">
+          <Key>
+            <PropertyRef Name="idCidade" />
+          </Key>
+          <Property Name="idCidade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idEstado" Type="int" />
+          <Property Name="nome" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="condicaotempo">
+          <Key>
+            <PropertyRef Name="idCondicaoTempo" />
+          </Key>
+          <Property Name="idCondicaoTempo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="condicaovia">
+          <Key>
+            <PropertyRef Name="idCondicaoVia" />
+          </Key>
+          <Property Name="idCondicaoVia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="endereco">
+          <Key>
+            <PropertyRef Name="idEndereco" />
+          </Key>
+          <Property Name="idEndereco" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="logradouro" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="bairro" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="cep" Type="varchar" MaxLength="9" />
+          <Property Name="idCidade" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="envolvido">
+          <Key>
+            <PropertyRef Name="idOcorrencia" />
+            <PropertyRef Name="idPessoa" />
+          </Key>
+          <Property Name="idOcorrencia" Type="int" Nullable="false" />
+          <Property Name="idPessoa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="idEstado" />
+          </Key>
+          <Property Name="idEstado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="ocorrencia">
+          <Key>
+            <PropertyRef Name="idOcorrencia" />
+          </Key>
+          <Property Name="idOcorrencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="data" Type="datetime" />
+          <Property Name="gravidade" Type="varchar" MaxLength="45" />
+          <Property Name="possuiVitimas" Type="bool" />
+          <Property Name="idEndereco" Type="int" />
+          <Property Name="idCondicaoTempo" Type="int" Nullable="false" />
+          <Property Name="idCondicaoVia" Type="int" Nullable="false" />
+          <Property Name="idSinalizacaoVia" Type="int" Nullable="false" />
+          <Property Name="idTipoOcorrencia" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pessoa">
+          <Key>
+            <PropertyRef Name="idPessoa" />
+          </Key>
+          <Property Name="idPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cnh" Type="int" Nullable="false" />
+          <Property Name="cpf" Type="int" Nullable="false" />
+          <Property Name="nome" Type="char" Nullable="false" MaxLength="200" />
+          <Property Name="email" Type="varchar" MaxLength="450" />
+          <Property Name="dataNascimento" Type="datetime" Nullable="false" />
+          <Property Name="idEndereco" Type="int" Nullable="false" />
+          <Property Name="isPM" Type="bool" />
+        </EntityType>
+        <EntityType Name="pmocorrencia">
+          <Key>
+            <PropertyRef Name="idOcorrencia" />
+            <PropertyRef Name="idPessoa" />
+          </Key>
+          <Property Name="idOcorrencia" Type="int" Nullable="false" />
+          <Property Name="idPessoa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pmtrote">
+          <Key>
+            <PropertyRef Name="idPessoa" />
+            <PropertyRef Name="idTrote" />
+          </Key>
+          <Property Name="idPessoa" Type="int" Nullable="false" />
+          <Property Name="idTrote" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sinalizacaovia">
+          <Key>
+            <PropertyRef Name="idSinalizacaoVia" />
+          </Key>
+          <Property Name="idSinalizacaoVia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="telefone">
+          <Key>
+            <PropertyRef Name="idTelefone" />
+          </Key>
+          <Property Name="idTelefone" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idPessoa" Type="int" Nullable="false" />
+          <Property Name="ddd" Type="int" />
+          <Property Name="numero" Type="int" />
+        </EntityType>
+        <EntityType Name="tipoocorrencia">
+          <Key>
+            <PropertyRef Name="idTipoOcorrencia" />
+          </Key>
+          <Property Name="idTipoOcorrencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="trote">
+          <Key>
+            <PropertyRef Name="idTrote" />
+          </Key>
+          <Property Name="idTrote" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="telfoneRequisitante" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="deslocouViatura" Type="bool" Nullable="false" />
+          <Property Name="idEndereco" Type="int" />
+        </EntityType>
+        <EntityType Name="veiculo">
+          <Key>
+            <PropertyRef Name="idVeiculo" />
+          </Key>
+          <Property Name="idVeiculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="renavan" Type="int" Nullable="false" />
+          <Property Name="placa" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="marca" Type="char" MaxLength="20" />
+          <Property Name="modelo" Type="char" MaxLength="30" />
+          <Property Name="anoFabricacao" Type="int" />
+          <Property Name="tipo" Type="char" MaxLength="20" />
+          <Property Name="idProprietario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="veiculoocorrencia">
+          <Key>
+            <PropertyRef Name="idOcorrencia" />
+            <PropertyRef Name="idVeiculo" />
+          </Key>
+          <Property Name="idOcorrencia" Type="int" Nullable="false" />
+          <Property Name="idVeiculo" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Cidade">
+          <End Role="cidade" Type="SiGATModel.Store.cidade" Multiplicity="1" />
+          <End Role="endereco" Type="SiGATModel.Store.endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="idCidade" />
+            </Principal>
+            <Dependent Role="endereco">
+              <PropertyRef Name="idCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Endereco">
+          <End Role="endereco" Type="SiGATModel.Store.endereco" Multiplicity="0..1" />
+          <End Role="ocorrencia" Type="SiGATModel.Store.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="idEndereco" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EnderecoPessoa">
+          <End Role="endereco" Type="SiGATModel.Store.endereco" Multiplicity="1" />
+          <End Role="pessoa" Type="SiGATModel.Store.pessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="idEndereco" />
+            </Principal>
+            <Dependent Role="pessoa">
+              <PropertyRef Name="idEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Estado">
+          <End Role="estado" Type="SiGATModel.Store.estado" Multiplicity="0..1" />
+          <End Role="cidade" Type="SiGATModel.Store.cidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="idEstado" />
+            </Principal>
+            <Dependent Role="cidade">
+              <PropertyRef Name="idEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_condicaoTempo1">
+          <End Role="condicaotempo" Type="SiGATModel.Store.condicaotempo" Multiplicity="1" />
+          <End Role="ocorrencia" Type="SiGATModel.Store.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="condicaotempo">
+              <PropertyRef Name="idCondicaoTempo" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idCondicaoTempo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_condicaoVia1">
+          <End Role="condicaovia" Type="SiGATModel.Store.condicaovia" Multiplicity="1" />
+          <End Role="ocorrencia" Type="SiGATModel.Store.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="condicaovia">
+              <PropertyRef Name="idCondicaoVia" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idCondicaoVia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_has_Pessoa_Ocorrencia1">
+          <End Role="ocorrencia" Type="SiGATModel.Store.ocorrencia" Multiplicity="1" />
+          <End Role="envolvido" Type="SiGATModel.Store.envolvido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ocorrencia">
+              <PropertyRef Name="idOcorrencia" />
+            </Principal>
+            <Dependent Role="envolvido">
+              <PropertyRef Name="idOcorrencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_has_Pessoa_Ocorrencia2">
+          <End Role="ocorrencia" Type="SiGATModel.Store.ocorrencia" Multiplicity="1" />
+          <End Role="pmocorrencia" Type="SiGATModel.Store.pmocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ocorrencia">
+              <PropertyRef Name="idOcorrencia" />
+            </Principal>
+            <Dependent Role="pmocorrencia">
+              <PropertyRef Name="idOcorrencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_has_Pessoa_Pessoa1">
+          <End Role="pessoa" Type="SiGATModel.Store.pessoa" Multiplicity="1" />
+          <End Role="envolvido" Type="SiGATModel.Store.envolvido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="idPessoa" />
+            </Principal>
+            <Dependent Role="envolvido">
+              <PropertyRef Name="idPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_has_Pessoa_Pessoa2">
+          <End Role="pessoa" Type="SiGATModel.Store.pessoa" Multiplicity="1" />
+          <End Role="pmocorrencia" Type="SiGATModel.Store.pmocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="idPessoa" />
+            </Principal>
+            <Dependent Role="pmocorrencia">
+              <PropertyRef Name="idPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_has_Veiculo_Ocorrencia1">
+          <End Role="ocorrencia" Type="SiGATModel.Store.ocorrencia" Multiplicity="1" />
+          <End Role="veiculoocorrencia" Type="SiGATModel.Store.veiculoocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ocorrencia">
+              <PropertyRef Name="idOcorrencia" />
+            </Principal>
+            <Dependent Role="veiculoocorrencia">
+              <PropertyRef Name="idOcorrencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_has_Veiculo_Veiculo1">
+          <End Role="veiculo" Type="SiGATModel.Store.veiculo" Multiplicity="1" />
+          <End Role="veiculoocorrencia" Type="SiGATModel.Store.veiculoocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="veiculo">
+              <PropertyRef Name="idVeiculo" />
+            </Principal>
+            <Dependent Role="veiculoocorrencia">
+              <PropertyRef Name="idVeiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_sinalizacaoVia1">
+          <End Role="sinalizacaovia" Type="SiGATModel.Store.sinalizacaovia" Multiplicity="1" />
+          <End Role="ocorrencia" Type="SiGATModel.Store.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sinalizacaovia">
+              <PropertyRef Name="idSinalizacaoVia" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idSinalizacaoVia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_TipoOcorrencia1">
+          <End Role="tipoocorrencia" Type="SiGATModel.Store.tipoocorrencia" Multiplicity="1" />
+          <End Role="ocorrencia" Type="SiGATModel.Store.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoocorrencia">
+              <PropertyRef Name="idTipoOcorrencia" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idTipoOcorrencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Pessoa_has_Trote_Pessoa1">
+          <End Role="pessoa" Type="SiGATModel.Store.pessoa" Multiplicity="1" />
+          <End Role="pmtrote" Type="SiGATModel.Store.pmtrote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="idPessoa" />
+            </Principal>
+            <Dependent Role="pmtrote">
+              <PropertyRef Name="idPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Pessoa_has_Trote_Trote1">
+          <End Role="trote" Type="SiGATModel.Store.trote" Multiplicity="1" />
+          <End Role="pmtrote" Type="SiGATModel.Store.pmtrote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trote">
+              <PropertyRef Name="idTrote" />
+            </Principal>
+            <Dependent Role="pmtrote">
+              <PropertyRef Name="idTrote" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProprietarioVeiculo">
+          <End Role="pessoa" Type="SiGATModel.Store.pessoa" Multiplicity="1" />
+          <End Role="veiculo" Type="SiGATModel.Store.veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="idPessoa" />
+            </Principal>
+            <Dependent Role="veiculo">
+              <PropertyRef Name="idProprietario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Telefone_Pessoa1">
+          <End Role="pessoa" Type="SiGATModel.Store.pessoa" Multiplicity="1" />
+          <End Role="telefone" Type="SiGATModel.Store.telefone" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="idPessoa" />
+            </Principal>
+            <Dependent Role="telefone">
+              <PropertyRef Name="idPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Trote_Endereco1">
+          <End Role="endereco" Type="SiGATModel.Store.endereco" Multiplicity="0..1" />
+          <End Role="trote" Type="SiGATModel.Store.trote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="idEndereco" />
+            </Principal>
+            <Dependent Role="trote">
+              <PropertyRef Name="idEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SiGATModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SiGATEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CidadeSet" EntityType="SiGATModel.Cidade" />
+          <EntitySet Name="CondicaoTempoSet" EntityType="SiGATModel.CondicaoTempo" />
+          <EntitySet Name="CondicaoViaSet" EntityType="SiGATModel.CondicaoVia" />
+          <EntitySet Name="EnderecoSet" EntityType="SiGATModel.Endereco" />
+          <EntitySet Name="EstadoSet" EntityType="SiGATModel.Estado" />
+          <EntitySet Name="ocorrencia" EntityType="SiGATModel.ocorrencia" />
+          <EntitySet Name="PessoaSet" EntityType="SiGATModel.Pessoa" />
+          <EntitySet Name="SinalizacaoViaSet" EntityType="SiGATModel.SinalizacaoVia" />
+          <EntitySet Name="TelefoneSet" EntityType="SiGATModel.Telefone" />
+          <EntitySet Name="TipoOcorrenciaSet" EntityType="SiGATModel.TipoOcorrencia" />
+          <EntitySet Name="TroteSet" EntityType="SiGATModel.Trote" />
+          <EntitySet Name="VeiculoSet" EntityType="SiGATModel.Veiculo" />
+          <AssociationSet Name="FK_Cidade" Association="SiGATModel.FK_Cidade">
+            <End Role="cidade" EntitySet="CidadeSet" />
+            <End Role="endereco" EntitySet="EnderecoSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Estado" Association="SiGATModel.FK_Estado">
+            <End Role="estado" EntitySet="EstadoSet" />
+            <End Role="cidade" EntitySet="CidadeSet" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_condicaoTempo1" Association="SiGATModel.fk_Ocorrencia_condicaoTempo1">
+            <End Role="condicaotempo" EntitySet="CondicaoTempoSet" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_condicaoVia1" Association="SiGATModel.fk_Ocorrencia_condicaoVia1">
+            <End Role="condicaovia" EntitySet="CondicaoViaSet" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Endereco" Association="SiGATModel.FK_Endereco">
+            <End Role="endereco" EntitySet="EnderecoSet" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EnderecoPessoa" Association="SiGATModel.FK_EnderecoPessoa">
+            <End Role="endereco" EntitySet="EnderecoSet" />
+            <End Role="pessoa" EntitySet="PessoaSet" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Trote_Endereco1" Association="SiGATModel.fk_Trote_Endereco1">
+            <End Role="endereco" EntitySet="EnderecoSet" />
+            <End Role="trote" EntitySet="TroteSet" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_sinalizacaoVia1" Association="SiGATModel.fk_Ocorrencia_sinalizacaoVia1">
+            <End Role="sinalizacaovia" EntitySet="SinalizacaoViaSet" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ocorrencia_TipoOcorrencia1" Association="SiGATModel.fk_Ocorrencia_TipoOcorrencia1">
+            <End Role="tipoocorrencia" EntitySet="TipoOcorrenciaSet" />
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProprietarioVeiculo" Association="SiGATModel.FK_ProprietarioVeiculo">
+            <End Role="pessoa" EntitySet="PessoaSet" />
+            <End Role="veiculo" EntitySet="VeiculoSet" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Telefone_Pessoa1" Association="SiGATModel.fk_Telefone_Pessoa1">
+            <End Role="pessoa" EntitySet="PessoaSet" />
+            <End Role="telefone" EntitySet="TelefoneSet" />
+          </AssociationSet>
+          <AssociationSet Name="envolvido" Association="SiGATModel.envolvido">
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+            <End Role="pessoa" EntitySet="PessoaSet" />
+          </AssociationSet>
+          <AssociationSet Name="pmocorrencia" Association="SiGATModel.pmocorrencia">
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+            <End Role="pessoa" EntitySet="PessoaSet" />
+          </AssociationSet>
+          <AssociationSet Name="pmtrote" Association="SiGATModel.pmtrote">
+            <End Role="pessoa" EntitySet="PessoaSet" />
+            <End Role="trote" EntitySet="TroteSet" />
+          </AssociationSet>
+          <AssociationSet Name="veiculoocorrencia" Association="SiGATModel.veiculoocorrencia">
+            <End Role="ocorrencia" EntitySet="ocorrencia" />
+            <End Role="veiculo" EntitySet="VeiculoSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cidade">
+          <Key>
+            <PropertyRef Name="idCidade" />
+          </Key>
+          <Property Name="idCidade" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idEstado" Type="Int32" />
+          <Property Name="nome" Type="String" />
+          <NavigationProperty Name="endereco" Relationship="SiGATModel.FK_Cidade" FromRole="cidade" ToRole="endereco" />
+          <NavigationProperty Name="estado" Relationship="SiGATModel.FK_Estado" FromRole="cidade" ToRole="estado" />
+        </EntityType>
+        <EntityType Name="CondicaoTempo">
+          <Key>
+            <PropertyRef Name="idCondicaoTempo" />
+          </Key>
+          <Property Name="idCondicaoTempo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" />
+          <NavigationProperty Name="ocorrencia" Relationship="SiGATModel.fk_Ocorrencia_condicaoTempo1" FromRole="condicaotempo" ToRole="ocorrencia" />
+        </EntityType>
+        <EntityType Name="CondicaoVia">
+          <Key>
+            <PropertyRef Name="idCondicaoVia" />
+          </Key>
+          <Property Name="idCondicaoVia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" />
+          <NavigationProperty Name="ocorrencia" Relationship="SiGATModel.fk_Ocorrencia_condicaoVia1" FromRole="condicaovia" ToRole="ocorrencia" />
+        </EntityType>
+        <EntityType Name="Endereco">
+          <Key>
+            <PropertyRef Name="idEndereco" />
+          </Key>
+          <Property Name="idEndereco" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="logradouro" Type="String" Nullable="false" />
+          <Property Name="bairro" Type="String" Nullable="false" />
+          <Property Name="cep" Type="String" />
+          <Property Name="idCidade" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cidade" Relationship="SiGATModel.FK_Cidade" FromRole="endereco" ToRole="cidade" />
+          <NavigationProperty Name="ocorrencia" Relationship="SiGATModel.FK_Endereco" FromRole="endereco" ToRole="ocorrencia" />
+          <NavigationProperty Name="pessoa" Relationship="SiGATModel.FK_EnderecoPessoa" FromRole="endereco" ToRole="pessoa" />
+          <NavigationProperty Name="trote" Relationship="SiGATModel.fk_Trote_Endereco1" FromRole="endereco" ToRole="trote" />
+        </EntityType>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="idEstado" />
+          </Key>
+          <Property Name="idEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" />
+          <NavigationProperty Name="cidade" Relationship="SiGATModel.FK_Estado" FromRole="estado" ToRole="cidade" />
+        </EntityType>
+        <EntityType Name="ocorrencia">
+          <Key>
+            <PropertyRef Name="idOcorrencia" />
+          </Key>
+          <Property Name="idOcorrencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="data" Type="DateTime" />
+          <Property Name="gravidade" Type="String" />
+          <Property Name="possuiVitimas" Type="Boolean" />
+          <Property Name="idEndereco" Type="Int32" />
+          <Property Name="idCondicaoTempo" Type="Int32" Nullable="false" />
+          <Property Name="idCondicaoVia" Type="Int32" Nullable="false" />
+          <Property Name="idSinalizacaoVia" Type="Int32" Nullable="false" />
+          <Property Name="idTipoOcorrencia" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="condicaotempo" Relationship="SiGATModel.fk_Ocorrencia_condicaoTempo1" FromRole="ocorrencia" ToRole="condicaotempo" />
+          <NavigationProperty Name="condicaovia" Relationship="SiGATModel.fk_Ocorrencia_condicaoVia1" FromRole="ocorrencia" ToRole="condicaovia" />
+          <NavigationProperty Name="endereco" Relationship="SiGATModel.FK_Endereco" FromRole="ocorrencia" ToRole="endereco" />
+          <NavigationProperty Name="sinalizacaovia" Relationship="SiGATModel.fk_Ocorrencia_sinalizacaoVia1" FromRole="ocorrencia" ToRole="sinalizacaovia" />
+          <NavigationProperty Name="tipoocorrencia" Relationship="SiGATModel.fk_Ocorrencia_TipoOcorrencia1" FromRole="ocorrencia" ToRole="tipoocorrencia" />
+          <NavigationProperty Name="pessoa" Relationship="SiGATModel.envolvido" FromRole="ocorrencia" ToRole="pessoa" />
+          <NavigationProperty Name="pessoa1" Relationship="SiGATModel.pmocorrencia" FromRole="ocorrencia" ToRole="pessoa" />
+          <NavigationProperty Name="veiculo" Relationship="SiGATModel.veiculoocorrencia" FromRole="ocorrencia" ToRole="veiculo" />
+        </EntityType>
+        <EntityType Name="Pessoa">
+          <Key>
+            <PropertyRef Name="idPessoa" />
+          </Key>
+          <Property Name="idPessoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cnh" Type="Int32" Nullable="false" />
+          <Property Name="cpf" Type="Int32" Nullable="false" />
+          <Property Name="nome" Type="String" Nullable="false" />
+          <Property Name="email" Type="String" />
+          <Property Name="dataNascimento" Type="DateTime" Nullable="false" />
+          <Property Name="idEndereco" Type="Int32" Nullable="false" />
+          <Property Name="isPM" Type="Boolean" />
+          <NavigationProperty Name="endereco" Relationship="SiGATModel.FK_EnderecoPessoa" FromRole="pessoa" ToRole="endereco" />
+          <NavigationProperty Name="veiculo" Relationship="SiGATModel.FK_ProprietarioVeiculo" FromRole="pessoa" ToRole="veiculo" />
+          <NavigationProperty Name="telefone" Relationship="SiGATModel.fk_Telefone_Pessoa1" FromRole="pessoa" ToRole="telefone" />
+          <NavigationProperty Name="ocorrencia" Relationship="SiGATModel.envolvido" FromRole="pessoa" ToRole="ocorrencia" />
+          <NavigationProperty Name="ocorrencia1" Relationship="SiGATModel.pmocorrencia" FromRole="pessoa" ToRole="ocorrencia" />
+          <NavigationProperty Name="trote" Relationship="SiGATModel.pmtrote" FromRole="pessoa" ToRole="trote" />
+        </EntityType>
+        <EntityType Name="SinalizacaoVia">
+          <Key>
+            <PropertyRef Name="idSinalizacaoVia" />
+          </Key>
+          <Property Name="idSinalizacaoVia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" />
+          <NavigationProperty Name="ocorrencia" Relationship="SiGATModel.fk_Ocorrencia_sinalizacaoVia1" FromRole="sinalizacaovia" ToRole="ocorrencia" />
+        </EntityType>
+        <EntityType Name="Telefone">
+          <Key>
+            <PropertyRef Name="idTelefone" />
+          </Key>
+          <Property Name="idTelefone" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idPessoa" Type="Int32" Nullable="false" />
+          <Property Name="ddd" Type="Int32" />
+          <Property Name="numero" Type="Int32" />
+          <NavigationProperty Name="pessoa" Relationship="SiGATModel.fk_Telefone_Pessoa1" FromRole="telefone" ToRole="pessoa" />
+        </EntityType>
+        <EntityType Name="TipoOcorrencia">
+          <Key>
+            <PropertyRef Name="idTipoOcorrencia" />
+          </Key>
+          <Property Name="idTipoOcorrencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" />
+          <NavigationProperty Name="ocorrencia" Relationship="SiGATModel.fk_Ocorrencia_TipoOcorrencia1" FromRole="tipoocorrencia" ToRole="ocorrencia" />
+        </EntityType>
+        <EntityType Name="Trote">
+          <Key>
+            <PropertyRef Name="idTrote" />
+          </Key>
+          <Property Name="idTrote" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="data" Type="DateTime" Nullable="false" />
+          <Property Name="telfoneRequisitante" Type="String" Nullable="false" />
+          <Property Name="deslocouViatura" Type="Boolean" Nullable="false" />
+          <Property Name="idEndereco" Type="Int32" />
+          <NavigationProperty Name="endereco" Relationship="SiGATModel.fk_Trote_Endereco1" FromRole="trote" ToRole="endereco" />
+          <NavigationProperty Name="pessoa" Relationship="SiGATModel.pmtrote" FromRole="trote" ToRole="pessoa" />
+        </EntityType>
+        <EntityType Name="Veiculo">
+          <Key>
+            <PropertyRef Name="idVeiculo" />
+          </Key>
+          <Property Name="idVeiculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="renavan" Type="Int32" Nullable="false" />
+          <Property Name="placa" Type="String" Nullable="false" />
+          <Property Name="marca" Type="String" />
+          <Property Name="modelo" Type="String" />
+          <Property Name="anoFabricacao" Type="Int32" />
+          <Property Name="tipo" Type="String" />
+          <Property Name="idProprietario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="pessoa" Relationship="SiGATModel.FK_ProprietarioVeiculo" FromRole="veiculo" ToRole="pessoa" />
+          <NavigationProperty Name="ocorrencia" Relationship="SiGATModel.veiculoocorrencia" FromRole="veiculo" ToRole="ocorrencia" />
+        </EntityType>
+        <Association Name="FK_Cidade">
+          <End Role="cidade" Type="SiGATModel.Cidade" Multiplicity="1" />
+          <End Role="endereco" Type="SiGATModel.Endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cidade">
+              <PropertyRef Name="idCidade" />
+            </Principal>
+            <Dependent Role="endereco">
+              <PropertyRef Name="idCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Estado">
+          <End Role="estado" Type="SiGATModel.Estado" Multiplicity="0..1" />
+          <End Role="cidade" Type="SiGATModel.Cidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="idEstado" />
+            </Principal>
+            <Dependent Role="cidade">
+              <PropertyRef Name="idEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_condicaoTempo1">
+          <End Role="condicaotempo" Type="SiGATModel.CondicaoTempo" Multiplicity="1" />
+          <End Role="ocorrencia" Type="SiGATModel.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="condicaotempo">
+              <PropertyRef Name="idCondicaoTempo" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idCondicaoTempo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_condicaoVia1">
+          <End Role="condicaovia" Type="SiGATModel.CondicaoVia" Multiplicity="1" />
+          <End Role="ocorrencia" Type="SiGATModel.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="condicaovia">
+              <PropertyRef Name="idCondicaoVia" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idCondicaoVia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Endereco">
+          <End Role="endereco" Type="SiGATModel.Endereco" Multiplicity="0..1" />
+          <End Role="ocorrencia" Type="SiGATModel.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="idEndereco" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EnderecoPessoa">
+          <End Role="endereco" Type="SiGATModel.Endereco" Multiplicity="1" />
+          <End Role="pessoa" Type="SiGATModel.Pessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="idEndereco" />
+            </Principal>
+            <Dependent Role="pessoa">
+              <PropertyRef Name="idEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Trote_Endereco1">
+          <End Role="endereco" Type="SiGATModel.Endereco" Multiplicity="0..1" />
+          <End Role="trote" Type="SiGATModel.Trote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="idEndereco" />
+            </Principal>
+            <Dependent Role="trote">
+              <PropertyRef Name="idEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_sinalizacaoVia1">
+          <End Role="sinalizacaovia" Type="SiGATModel.SinalizacaoVia" Multiplicity="1" />
+          <End Role="ocorrencia" Type="SiGATModel.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sinalizacaovia">
+              <PropertyRef Name="idSinalizacaoVia" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idSinalizacaoVia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ocorrencia_TipoOcorrencia1">
+          <End Role="tipoocorrencia" Type="SiGATModel.TipoOcorrencia" Multiplicity="1" />
+          <End Role="ocorrencia" Type="SiGATModel.ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoocorrencia">
+              <PropertyRef Name="idTipoOcorrencia" />
+            </Principal>
+            <Dependent Role="ocorrencia">
+              <PropertyRef Name="idTipoOcorrencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProprietarioVeiculo">
+          <End Role="pessoa" Type="SiGATModel.Pessoa" Multiplicity="1" />
+          <End Role="veiculo" Type="SiGATModel.Veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="idPessoa" />
+            </Principal>
+            <Dependent Role="veiculo">
+              <PropertyRef Name="idProprietario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Telefone_Pessoa1">
+          <End Role="pessoa" Type="SiGATModel.Pessoa" Multiplicity="1" />
+          <End Role="telefone" Type="SiGATModel.Telefone" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="idPessoa" />
+            </Principal>
+            <Dependent Role="telefone">
+              <PropertyRef Name="idPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="envolvido">
+          <End Role="ocorrencia" Type="SiGATModel.ocorrencia" Multiplicity="*" />
+          <End Role="pessoa" Type="SiGATModel.Pessoa" Multiplicity="*" />
+        </Association>
+        <Association Name="pmocorrencia">
+          <End Role="ocorrencia" Type="SiGATModel.ocorrencia" Multiplicity="*" />
+          <End Role="pessoa" Type="SiGATModel.Pessoa" Multiplicity="*" />
+        </Association>
+        <Association Name="pmtrote">
+          <End Role="pessoa" Type="SiGATModel.Pessoa" Multiplicity="*" />
+          <End Role="trote" Type="SiGATModel.Trote" Multiplicity="*" />
+        </Association>
+        <Association Name="veiculoocorrencia">
+          <End Role="ocorrencia" Type="SiGATModel.ocorrencia" Multiplicity="*" />
+          <End Role="veiculo" Type="SiGATModel.Veiculo" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SiGATModelStoreContainer" CdmEntityContainer="SiGATEntities">
+          <EntitySetMapping Name="CidadeSet"><EntityTypeMapping TypeName="SiGATModel.Cidade"><MappingFragment StoreEntitySet="cidade">
+            <ScalarProperty Name="idCidade" ColumnName="idCidade" />
+            <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CondicaoTempoSet"><EntityTypeMapping TypeName="SiGATModel.CondicaoTempo"><MappingFragment StoreEntitySet="condicaotempo">
+            <ScalarProperty Name="idCondicaoTempo" ColumnName="idCondicaoTempo" />
+            <ScalarProperty Name="descricao" ColumnName="descricao" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CondicaoViaSet"><EntityTypeMapping TypeName="SiGATModel.CondicaoVia"><MappingFragment StoreEntitySet="condicaovia">
+            <ScalarProperty Name="idCondicaoVia" ColumnName="idCondicaoVia" />
+            <ScalarProperty Name="descricao" ColumnName="descricao" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EnderecoSet"><EntityTypeMapping TypeName="SiGATModel.Endereco"><MappingFragment StoreEntitySet="endereco">
+            <ScalarProperty Name="idEndereco" ColumnName="idEndereco" />
+            <ScalarProperty Name="logradouro" ColumnName="logradouro" />
+            <ScalarProperty Name="bairro" ColumnName="bairro" />
+            <ScalarProperty Name="cep" ColumnName="cep" />
+            <ScalarProperty Name="idCidade" ColumnName="idCidade" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EstadoSet"><EntityTypeMapping TypeName="SiGATModel.Estado"><MappingFragment StoreEntitySet="estado">
+            <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ocorrencia"><EntityTypeMapping TypeName="SiGATModel.ocorrencia"><MappingFragment StoreEntitySet="ocorrencia">
+            <ScalarProperty Name="idOcorrencia" ColumnName="idOcorrencia" />
+            <ScalarProperty Name="data" ColumnName="data" />
+            <ScalarProperty Name="gravidade" ColumnName="gravidade" />
+            <ScalarProperty Name="possuiVitimas" ColumnName="possuiVitimas" />
+            <ScalarProperty Name="idEndereco" ColumnName="idEndereco" />
+            <ScalarProperty Name="idCondicaoTempo" ColumnName="idCondicaoTempo" />
+            <ScalarProperty Name="idCondicaoVia" ColumnName="idCondicaoVia" />
+            <ScalarProperty Name="idSinalizacaoVia" ColumnName="idSinalizacaoVia" />
+            <ScalarProperty Name="idTipoOcorrencia" ColumnName="idTipoOcorrencia" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PessoaSet"><EntityTypeMapping TypeName="SiGATModel.Pessoa"><MappingFragment StoreEntitySet="pessoa">
+            <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+            <ScalarProperty Name="cnh" ColumnName="cnh" />
+            <ScalarProperty Name="cpf" ColumnName="cpf" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="dataNascimento" ColumnName="dataNascimento" />
+            <ScalarProperty Name="idEndereco" ColumnName="idEndereco" />
+            <ScalarProperty Name="isPM" ColumnName="isPM" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SinalizacaoViaSet"><EntityTypeMapping TypeName="SiGATModel.SinalizacaoVia"><MappingFragment StoreEntitySet="sinalizacaovia">
+            <ScalarProperty Name="idSinalizacaoVia" ColumnName="idSinalizacaoVia" />
+            <ScalarProperty Name="descricao" ColumnName="descricao" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TelefoneSet"><EntityTypeMapping TypeName="SiGATModel.Telefone"><MappingFragment StoreEntitySet="telefone">
+            <ScalarProperty Name="idTelefone" ColumnName="idTelefone" />
+            <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+            <ScalarProperty Name="ddd" ColumnName="ddd" />
+            <ScalarProperty Name="numero" ColumnName="numero" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TipoOcorrenciaSet"><EntityTypeMapping TypeName="SiGATModel.TipoOcorrencia"><MappingFragment StoreEntitySet="tipoocorrencia">
+            <ScalarProperty Name="idTipoOcorrencia" ColumnName="idTipoOcorrencia" />
+            <ScalarProperty Name="descricao" ColumnName="descricao" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TroteSet"><EntityTypeMapping TypeName="SiGATModel.Trote"><MappingFragment StoreEntitySet="trote">
+            <ScalarProperty Name="idTrote" ColumnName="idTrote" />
+            <ScalarProperty Name="data" ColumnName="data" />
+            <ScalarProperty Name="telfoneRequisitante" ColumnName="telfoneRequisitante" />
+            <ScalarProperty Name="deslocouViatura" ColumnName="deslocouViatura" />
+            <ScalarProperty Name="idEndereco" ColumnName="idEndereco" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="VeiculoSet"><EntityTypeMapping TypeName="SiGATModel.Veiculo"><MappingFragment StoreEntitySet="veiculo">
+            <ScalarProperty Name="idVeiculo" ColumnName="idVeiculo" />
+            <ScalarProperty Name="renavan" ColumnName="renavan" />
+            <ScalarProperty Name="placa" ColumnName="placa" />
+            <ScalarProperty Name="marca" ColumnName="marca" />
+            <ScalarProperty Name="modelo" ColumnName="modelo" />
+            <ScalarProperty Name="anoFabricacao" ColumnName="anoFabricacao" />
+            <ScalarProperty Name="tipo" ColumnName="tipo" />
+            <ScalarProperty Name="idProprietario" ColumnName="idProprietario" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="envolvido" TypeName="SiGATModel.envolvido" StoreEntitySet="envolvido">
+            <EndProperty Name="ocorrencia">
+              <ScalarProperty Name="idOcorrencia" ColumnName="idOcorrencia" />
+            </EndProperty>
+            <EndProperty Name="pessoa">
+              <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="pmocorrencia" TypeName="SiGATModel.pmocorrencia" StoreEntitySet="pmocorrencia">
+            <EndProperty Name="ocorrencia">
+              <ScalarProperty Name="idOcorrencia" ColumnName="idOcorrencia" />
+            </EndProperty>
+            <EndProperty Name="pessoa">
+              <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="pmtrote" TypeName="SiGATModel.pmtrote" StoreEntitySet="pmtrote">
+            <EndProperty Name="pessoa">
+              <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
+            </EndProperty>
+            <EndProperty Name="trote">
+              <ScalarProperty Name="idTrote" ColumnName="idTrote" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="veiculoocorrencia" TypeName="SiGATModel.veiculoocorrencia" StoreEntitySet="veiculoocorrencia">
+            <EndProperty Name="ocorrencia">
+              <ScalarProperty Name="idOcorrencia" ColumnName="idOcorrencia" />
+            </EndProperty>
+            <EndProperty Name="veiculo">
+              <ScalarProperty Name="idVeiculo" ColumnName="idVeiculo" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SiGATModel" ZoomLevel="100">
+        <EntityTypeShape EntityType="SiGATModel.Cidade" Width="1.5" PointX="1" PointY="5.625" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.CondicaoTempo" Width="1.5" PointX="3.125" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.CondicaoVia" Width="1.5" PointX="4.75" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.Endereco" Width="1.5" PointX="1.125" PointY="2.25" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.Estado" Width="1.5" PointX="1.125" PointY="8.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.ocorrencia" Width="1.5" PointX="5.5" PointY="3.5" Height="4.2879036458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.Pessoa" Width="1.5" PointX="10.75" PointY="2.625" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.SinalizacaoVia" Width="1.5" PointX="6.375" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.Telefone" Width="1.5" PointX="10.75" PointY="7.25" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.TipoOcorrencia" Width="1.5" PointX="8.125" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.Trote" Width="1.5" PointX="12.875" PointY="2.125" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.Veiculo" Width="1.5" PointX="8.375" PointY="4.25" Height="2.9417936197916674" IsExpanded="true" />
+        <AssociationConnector Association="SiGATModel.FK_Cidade" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.8125" PointY="5.625" />
+          <ConnectorPoint PointX="1.8125" PointY="4.9994921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.FK_Estado" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.8125" PointY="8.375" />
+          <ConnectorPoint PointX="1.8125" PointY="7.6052864583333335" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.fk_Ocorrencia_condicaoTempo1" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.875" PointY="9.75" />
+          <ConnectorPoint PointX="3.875" PointY="6.0500773697916674" />
+          <ConnectorPoint PointX="5.5" PointY="6.0500773697916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.fk_Ocorrencia_condicaoVia1" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.875" PointY="9.75" />
+          <ConnectorPoint PointX="5.875" PointY="7.7879036458333335" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.FK_Endereco" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.625" PointY="4.24974609375" />
+          <ConnectorPoint PointX="5.5" PointY="4.24974609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.FK_EnderecoPessoa" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.625" PointY="3.03125" />
+          <ConnectorPoint PointX="10.75" PointY="3.03125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.fk_Trote_Endereco1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.625" PointY="2.40625" />
+          <ConnectorPoint PointX="12.875" PointY="2.40625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.fk_Ocorrencia_sinalizacaoVia1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.6875" PointY="9.75" />
+          <ConnectorPoint PointX="6.6875" PointY="7.7879036458333335" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.fk_Ocorrencia_TipoOcorrencia1" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.21875" PointY="9.75" />
+          <ConnectorPoint PointX="8.21875" PointY="7.5210986328125005" />
+          <ConnectorPoint PointX="7" PointY="7.5210986328125005" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.FK_ProprietarioVeiculo" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.75" PointY="4.7160953776041659" />
+          <ConnectorPoint PointX="9.875" PointY="4.7160953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.fk_Telefone_Pessoa1" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="6.3359993489583326" />
+          <ConnectorPoint PointX="11.5" PointY="7.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.envolvido" ManuallyRouted="false">
+          <ConnectorPoint PointX="7" PointY="3.84375" />
+          <ConnectorPoint PointX="10.75" PointY="3.84375" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.pmocorrencia" ManuallyRouted="false">
+          <ConnectorPoint PointX="7" PointY="4.078125" />
+          <ConnectorPoint PointX="10.75" PointY="4.078125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.pmtrote" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="3.5574446614583337" />
+          <ConnectorPoint PointX="12.875" PointY="3.5574446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="SiGATModel.veiculoocorrencia" ManuallyRouted="false">
+          <ConnectorPoint PointX="7" PointY="5.7208968098958337" />
+          <ConnectorPoint PointX="8.375" PointY="5.7208968098958337" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
