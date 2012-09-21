@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Create</h2>
+<h2>Cadastro</h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -17,7 +17,7 @@
         <legend>Trote</legend>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.data) %>
+            <%: Html.LabelFor(model => model.data, "Data") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.data) %>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.telfoneRequisitante) %>
+            <%: Html.LabelFor(model => model.telfoneRequisitante, "Telefone do Requisitante") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.telfoneRequisitante) %>
@@ -33,15 +33,18 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.deslocouViatura) %>
-        </div>
+            <%: Html.LabelFor(model => model.deslocouViatura,"Deslocou a viatura para o local?") %>
+
+            </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.deslocouViatura) %>
-            <%: Html.ValidationMessageFor(model => model.deslocouViatura) %>
+            <%: Html.RadioButtonFor(model => model.deslocouViatura, true) %> sim <br />
+            <%: Html.RadioButtonFor(model => model.deslocouViatura, false)%> não
+            <%: Html.ValidationMessageFor(model => model.deslocouViatura)%>
+           
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idEndereco, "endereco") %>
+            <%: Html.LabelFor(model => model.idEndereco, "Endereco") %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("idEndereco", String.Empty) %>
@@ -49,7 +52,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Cadastrar" />
         </p>
     </fieldset>
 <% } %>

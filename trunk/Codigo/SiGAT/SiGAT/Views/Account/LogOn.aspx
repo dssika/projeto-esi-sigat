@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="loginContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Log On</h2>
+    <h2>Login</h2>
     <p>
         Please enter your user name and password. <%: Html.ActionLink("Register", "Register") %> if you don't have an account.
     </p>
