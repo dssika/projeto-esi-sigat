@@ -1,33 +1,12 @@
 CREATE DATABASE  IF NOT EXISTS `sigat` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `sigat`;
--- MySQL dump 10.13  Distrib 5.1.40, for Win32 (ia32)
---
--- Host: localhost    Database: sigat
--- ------------------------------------------------------
--- Server version	5.0.16-nt
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Not dumping tablespaces as no INFORMATION_SCHEMA.FILES table on this server
---
 
 --
 -- Table structure for table `pmocorrencia`
 --
 
 DROP TABLE IF EXISTS `pmocorrencia`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `pmocorrencia` (
   `idOcorrencia` int(11) NOT NULL,
   `idPessoa` int(11) NOT NULL,
@@ -37,30 +16,18 @@ CREATE TABLE `pmocorrencia` (
   CONSTRAINT `fk_Ocorrencia_has_Pessoa_Ocorrencia2` FOREIGN KEY (`idOcorrencia`) REFERENCES `ocorrencia` (`idOcorrencia`) ON UPDATE CASCADE,
   CONSTRAINT `fk_Ocorrencia_has_Pessoa_Pessoa2` FOREIGN KEY (`idPessoa`) REFERENCES `pessoa` (`idPessoa`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `pmocorrencia`
---
-
-LOCK TABLES `pmocorrencia` WRITE;
-/*!40000 ALTER TABLE `pmocorrencia` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pmocorrencia` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `condicaotempo`
 --
 
 DROP TABLE IF EXISTS `condicaotempo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `condicaotempo` (
   `idCondicaoTempo` int(11) NOT NULL auto_increment,
   `descricao` varchar(45) NOT NULL,
   PRIMARY KEY  (`idCondicaoTempo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `condicaotempo`
@@ -291,19 +258,12 @@ DROP TABLE IF EXISTS `estado`;
 CREATE TABLE `estado` (
   `idEstado` int(11) NOT NULL auto_increment,
   `nome` varchar(45) default NULL,
+  `uf` varchar(2),
   PRIMARY KEY  (`idEstado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `estado`
---
 
-LOCK TABLES `estado` WRITE;
-/*!40000 ALTER TABLE `estado` DISABLE KEYS */;
-INSERT INTO `estado` VALUES (1,'SE'),(2,'RN'),(3,'AC'),(4,'AL'),(5,'AP'),(6,'AM'),(7,'BA'),(8,'CE'),(9,'DF'),(10,'ES'),(11,'GO'),(12,'MA'),(13,'MT'),(14,'MS'),(15,'MG'),(16,'PB'),(17,'PR'),(18,'PA'),(19,'PI'),(20,'RJ'),(21,'RN'),(22,'RS'),(23,'SC'),(24,'SP'),(25,'TO'),(26,'RO'),(27,'RR');
-/*!40000 ALTER TABLE `estado` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `cidade`
@@ -322,15 +282,6 @@ CREATE TABLE `cidade` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `cidade`
---
-
-LOCK TABLES `cidade` WRITE;
-/*!40000 ALTER TABLE `cidade` DISABLE KEYS */;
-INSERT INTO `cidade` VALUES (1,1,'Itabaiana'),(3,1,'Ribeirópolis'),(4,1,'Aracaju'),(5,1,'Malhador'),(76,4,'Maceió'),(88,1,'Itabaiana'),(101,1,'umbauba');
-/*!40000 ALTER TABLE `cidade` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `trote`
