@@ -14,13 +14,13 @@
 <table>
     <tr>
         <th>
-            pessoa
+            Pessoa
         </th>
         <th>
-            ddd
+            DDD
         </th>
         <th>
-            numero
+            Numero
         </th>
         <th></th>
     </tr>
@@ -37,9 +37,9 @@
             <%: Html.DisplayFor(modelItem => item.numero) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.idTelefone }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.idTelefone }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.idTelefone }) %>
+            <%: Html.ActionLink("Editar", "Edit", new { id=item.idTelefone }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.idTelefone }) %> |
+            <%: Html.ActionLink("Excluir", "Delete", new { id=item.idTelefone }) %>
         </td>
     </tr>
 <% } %>

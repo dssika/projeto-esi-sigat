@@ -9,21 +9,21 @@
 <h2>Cadastro de Trote</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Cadastrar novo trote", "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            data
+            Data
         </th>
         <th>
-            telfoneRequisitante
+            Telefone do Requisitante
         </th>
         <th>
-            deslocouViatura
+            Deslocou Viatura?
         </th>
         <th>
-            endereco
+            Endereço
         </th>
         <th></th>
     </tr>
@@ -43,9 +43,9 @@
             <%: Html.DisplayFor(modelItem => item.endereco.logradouro) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.idTrote }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.idTrote }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.idTrote }) %>
+            <%: Html.ActionLink("Editar", "Edit", new { id=item.idTrote }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.idTrote }) %> |
+            <%: Html.ActionLink("Excluir", "Delete", new { id=item.idTrote }) %>
         </td>
     </tr>
 <% } %>

@@ -19,7 +19,7 @@
         <%: Html.HiddenFor(model => model.idTelefone) %>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idPessoa, "pessoa") %>
+            <%: Html.LabelFor(model => model.idPessoa, "Pessoa") %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("idPessoa", String.Empty) %>
@@ -43,13 +43,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Salvar" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar", "Index") %>
 </div>
 
 </asp:Content>
