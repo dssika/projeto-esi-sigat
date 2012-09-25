@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<SiGAT.Models.Trote>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    Cadastrar
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -44,7 +44,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idEndereco, "Endereco") %>
+            <%: Html.LabelFor(model => model.idEndereco, "Endereço") %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("idEndereco", String.Empty) %>
@@ -58,7 +58,7 @@
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar", "Index") %>
 </div>
 
 </asp:Content>

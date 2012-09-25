@@ -6,30 +6,30 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Details</h2>
+<h2>Detalhes</h2>
 
 <fieldset>
     <legend>Telefone</legend>
 
-    <div class="display-label">pessoa</div>
+    <div class="display-label">Pessoa</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.pessoa.nome) %>
     </div>
 
-    <div class="display-label">ddd</div>
+    <div class="display-label">DDD</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.ddd) %>
     </div>
 
-    <div class="display-label">numero</div>
+    <div class="display-label">Numero</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.numero) %>
     </div>
 </fieldset>
 <p>
 
-    <%: Html.ActionLink("Edit", "Edit", new { id=Model.idTelefone }) %> |
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Editar", "Edit", new { id=Model.idTelefone }) %> |
+    <%: Html.ActionLink("Voltar", "Index") %>
 </p>
 
 </asp:Content>
