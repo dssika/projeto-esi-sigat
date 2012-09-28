@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Cadastro de Trote</h2>
+<h2>Trote</h2>
 
 <p>
     <%: Html.ActionLink("Cadastrar novo trote", "Create") %>
@@ -37,7 +37,7 @@
             <%: Html.DisplayFor(modelItem => item.telfoneRequisitante) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.deslocouViatura) %>
+            <%: Html.Label(item.deslocouViatura.ToString()) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.endereco.logradouro) %>
