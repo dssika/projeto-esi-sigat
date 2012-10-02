@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
+<h2>Excluir</h2>
 
 <h3>Confirma Exclusão?</h3>
 <fieldset>
