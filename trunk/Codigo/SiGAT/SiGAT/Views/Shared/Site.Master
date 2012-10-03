@@ -46,9 +46,11 @@
         </header>
         <section id="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-            <footer>
-            </footer>
+           
         </section>
+        <footer>
+            &copy; - Copyright 2012 - Todos os direitos Reservados SiGAT
+        </footer>
     </div>
 </body>
 </html>

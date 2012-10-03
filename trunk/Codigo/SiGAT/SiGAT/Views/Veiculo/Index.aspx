@@ -1,40 +1,39 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<SiGAT.Models.Veiculo>>" %>
+﻿<%@ Page Title="Veículos" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<SiGAT.Models.Veiculo>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    Veículos
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2>Veículos</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Adicione", "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            renavan
+            Renavan</th>
+        <th>
+            Placa
         </th>
         <th>
-            placa
+            Marca
         </th>
         <th>
-            marca
+            Modelo
         </th>
         <th>
-            modelo
+            Ano
         </th>
         <th>
-            anoFabricacao
+            Tipo
         </th>
         <th>
-            tipo
+            Proprietário
         </th>
-        <th>
-            pessoa
-        </th>
-        <th></th>
+        <th>Opções</th>
     </tr>
 
 <% foreach (var item in Model) { %>
