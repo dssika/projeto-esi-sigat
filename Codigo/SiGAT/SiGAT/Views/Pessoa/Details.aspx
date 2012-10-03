@@ -43,8 +43,8 @@
 
     <div class="display-label">Telefone</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.telefone) %>
-    </div>
+        <!--%: Html.DisplayFor(model => model.telefone) %>
+    </div-->
 
     <div class="display-label">É Policial Militar?</div>
     <div class="display-field">

@@ -79,6 +79,7 @@
     <Compile Include="Models\Dados\IRepositorioGenerico.cs" />
     <Compile Include="Models\Dados\ObjectContextFactory.cs" />
     <Compile Include="Models\Dados\RepositorioGenerico.cs" />
+    <Compile Include="Models\Negocio\NegocioCidade.cs" />
     <Compile Include="Models\Negocio\NegocioTelefone.cs" />
     <Compile Include="Models\Negocio\NegocioEndereco.cs" />
     <Compile Include="Models\Negocio\NegocioOcorrencia.cs" />
@@ -221,7 +222,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49599</DevelopmentServerPort>
+          <DevelopmentServerPort>61153</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

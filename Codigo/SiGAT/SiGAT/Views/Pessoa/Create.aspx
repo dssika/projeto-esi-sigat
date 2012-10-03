@@ -26,6 +26,60 @@
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#idEstado").change(function () {
+            listaCidade($(this).val());
+        });
+    });
+    //chamada ajax para a Action ListaCidade
+    //passando como parâmetro a Estado selecionado
+    function listaCidade(uf) {
+        $.getJSON('<%= Url.Action("ListaCidade") %>/' + uf, listaCidadeCallBack);
+    }
+    //função que irá ser chamada quando terminar
+    //a chamada ajax
+    function listaCidadeCallBack(json) {
+        //Limpar os itens que são maiores que 0
+        //Ou seja: não retirar o primeiro item
+        $("#idCidade :gt(0)").remove();
+        $(json).each(function () {
+            //adicionando as opções de acordo com o retorno
+            $("#idCidade").append("<option value='" + this.Id + "'>" + this.Nome + "</option>");
+        });
+    }
+
+    //Campo Data-AdicionaDataPicker
+    $(function () {
+        $(".datepicker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+            dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+            dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+            monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            changeMonth: true,
+            changeYear: true,
+            nextText: 'Próximo',
+            prevText: 'Anterior',
+            showOn: "button",
+            buttonImage: "../../Content/bootstrap/img/glyphicons/glyphicons_045_calendar.png",
+            buttonImageOnly: true
+        });
+    });
+
+    //Mascaras dos Campos
+    jQuery(function () {
+        $(".larguraTelefone").mask("?(99)9999-9999");
+        $(".larguraCpf").mask("?999.999.999-99");
+        $(".larguraRg").mask("?9.999.999-9");
+        $(".larguraCep").mask("?99999-999");
+        $(".data").mask("?99/99/9999");
+    });
+
+ 
+     </script>
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
@@ -53,7 +107,9 @@
             <%: Html.LabelFor(model => model.cpf) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.cpf) %>
+        <!--%: Html.TextBoxFor(model => model.cpf, new { @class = "larguraCpf", @required = "" })%-->
+         <%: Html.TextBoxFor(model => model.cpf)%>
+            <!--%: Html.EditorFor(model => model.cpf) %-->
             <%: Html.ValidationMessageFor(model => model.cpf) %>
         </div>
 
@@ -116,30 +172,31 @@
             <%: Html.ValidationMessageFor(model => model.endereco.idCidade)%>
         </div>
     </fieldset>
-    <fieldset>
+    <!--fieldset>
         <legend>Telefone</legend>
         <div class="editor-label">
-
-        <%: Html.LabelFor(model => model.telefone) %>
+        
+        <!--%: Html.LabelFor(model => model.telefone) %>
         </div>
         <div class="editor-field">
             </div>
             <!--   mudança 26-08
             %: Html.LabelFor(model => model.ddd) %>
         </div-->
-        <div class="editor-field">
-             <%: Html.DropDownList("idTelefone", String.Empty)%>
+        <!--div class="editor-field">
+        <!--%: Html.TextBoxFor(model => model.telefone)%>
+             <!--%: Html.DropDownList("idTelefone", String.Empty)%-->
             <!--%: Html.ValidationMessageFor(model => model.ddd) %-->
-        </div>
+        <!--/div>
 
-        <div class="editor-label">
+        <!--div class="editor-label">
             <!--%: Html.LabelFor(model => model.numero) %-->
-        </div>
-        <div class="editor-field">
+        <!--/div>
+        <!--div class="editor-field">
             <!--%: Html.EditorFor(model => model.numero) %-->
             <!--%: Html.ValidationMessageFor(model => model.numero) %-->
-        </div>
-    </fieldset>
+        <!--/div>
+    <!--/fieldset-->
 
     <fieldset>
         <legend>PM</legend>

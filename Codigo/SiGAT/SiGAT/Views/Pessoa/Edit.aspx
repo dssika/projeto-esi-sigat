@@ -66,13 +66,13 @@
             <%: Html.ValidationMessageFor(model => model.idEndereco) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.idTelefone, "Telefone") %>
+        <!--div class="editor-label">
+            <!--%: Html.LabelFor(model => model.idTelefone, "telefone") %>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownList("idTelefone", String.Empty) %>
-            <%: Html.ValidationMessageFor(model => model.idTelefone) %>
-        </div>
+            <!--%: Html.DropDownList("idTelefone", String.Empty) %>
+            <!--%: Html.ValidationMessageFor(model => model.idTelefone) %>
+        </div-->
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.isPM) %>
