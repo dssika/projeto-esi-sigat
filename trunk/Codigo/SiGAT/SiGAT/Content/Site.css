@@ -4,7 +4,7 @@ to use a different color start by replacing all instances of
 #5c87b2 with your new color.
 ----------------------------------------------------------*/
 body {
-    background-color: #5c87b2;
+    background-color: #3B3F41;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     margin: 0;
@@ -103,9 +103,9 @@ header h1, #header h1 {
 #main {
     padding: 30px 30px 15px 30px;
     background-color: #fff;
-    border-radius: 4px 0 0 0;
-    -webkit-border-radius: 4px 0 0 0;
-    -moz-border-radius: 4px 0 0 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
 }
 
 footer, 
@@ -125,11 +125,14 @@ footer,
 /* TAB MENU   
 ----------------------------------------------------------*/
 ul#menu {
-    border-bottom: 1px #5C87B2 solid;
     padding: 0 0 2px;
     position: relative;
     margin: 0;
-    text-align: right;
+    text-align: left;
+    background-color: #2F98D6;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
 }
 
 ul#menu li {
@@ -145,21 +148,20 @@ ul#menu li#greeting {
     color: #fff;
 }
 
-ul#menu li a {
+ul#menu li a 
+{
+    margin-left: 5px;
     padding: 10px 20px;
     font-weight: bold;
     text-decoration: none;
-    line-height: 2.8em;
-    background-color: #e8eef4;
-    color: #034af3;
-    border-radius: 4px 4px 0 0;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
+    line-height: 2.7em;
+    color: #FFF;
 }
 
-ul#menu li a:hover {
-    background-color: #fff;
-    text-decoration: none;
+ul#menu li a:hover 
+{
+    background-color: #11699C;
+    color: #FFF;
 }
 
 ul#menu li a:active {
@@ -168,8 +170,8 @@ ul#menu li a:active {
 }
 
 ul#menu li.selected a {
-    background-color: #fff;
-    color: #000;
+    background-color: #11699C;
+    color: #FFF;
 }
 
 /* FORM LAYOUT ELEMENTS   
@@ -245,7 +247,7 @@ table th {
 
 nav, 
 #menucontainer {
-    margin-top: 40px;
+    margin: 60px 0 20px 0;
 }
 
 div#title {
