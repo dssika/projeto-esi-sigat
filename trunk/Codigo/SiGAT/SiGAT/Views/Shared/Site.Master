@@ -15,7 +15,7 @@
             $("#dataNascimento").mask("99/99/9999");
             $("#telfoneRequisitante").mask("(99) 9999-9999");
             $("#endereco_cep").mask("99999-999");
-            $("#placa").mask("999-9999");
+            $("#placa").mask("aaa-9999");
         });
         $(function () {
             $("#data").datepicker();
@@ -37,7 +37,7 @@
                 <ul id="menu">
                     <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%: Html.ActionLink("Sobre", "About", "Home")%></li>
-                    <li><%: Html.ActionLink("Veiculo", "Index", "Veiculo")%></li>
+                    <li><%: Html.ActionLink("Veículo", "Index", "Veiculo")%></li>
                     <li><%: Html.ActionLink("Pessoa", "Index","Pessoa") %></li>
                     <li><%: Html.ActionLink("Ocorrencia", "Index","Ocorrencia") %></li>
                     <li><%: Html.ActionLink("Trote","Index","Trote") %></li>
@@ -46,7 +46,6 @@
         </header>
         <section id="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-           
         </section>
         <footer>
             &copy; - Copyright 2012 - Todos os direitos Reservados SiGAT
