@@ -56,9 +56,14 @@ namespace SiGAT.Models.Negocio
             return repositorioEstado.ObterTodos().ToList();
         }
 
-        public List<Cidade> ObterCidadePorEstado(int codEstado)
+        public List<Cidade> ObterCidadePorEstado(int idEstado)
         {
-            return null;
+            IQueryable<Cidade> cidades = repositorioCidade.GetQueryable().Where(cidade => cidade.idEstado == idEstado);
+
+            return cidades.ToList();
+
+
+
         }
 
     }

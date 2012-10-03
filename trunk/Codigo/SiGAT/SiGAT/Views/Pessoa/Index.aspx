@@ -1,29 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<SiGAT.Models.Pessoa>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    Envolvidos
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Pessoa</h2>
+<h2>Cadastro de Envolvidos: </h2>
 
 <p>
-    <%: Html.ActionLink("Cadastrar", "Create") %>
+    <%: Html.ActionLink("Cadastrar novo Envolvido", "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            CNH
+            Nome
         </th>
         <th>
             CPF
         </th>
         <th>
-            Nome
+            CNH
         </th>
         <th>
-            Email
+            E-mail
         </th>
         <th>
             Data de Nascimento
@@ -31,9 +31,9 @@
         <th>
             Endereço
         </th>
-        <th>
+        <!--th>
             Telefone
-        </th>
+        </th-->
         <th>
             É Policial Militar?
         </th>
@@ -43,13 +43,13 @@
 <% foreach (var item in Model) { %>
     <tr>
         <td>
-            <%: Html.DisplayFor(modelItem => item.cnh) %>
+            <%: Html.DisplayFor(modelItem => item.nome) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.cpf) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.nome) %>
+            <%: Html.DisplayFor(modelItem => item.cnh) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.email) %>
@@ -60,16 +60,25 @@
         <td>
             <%: Html.DisplayFor(modelItem => item.endereco.logradouro) %>
         </td>
+        <!--td-->
+            <!--%: Html.DisplayFor(modelItem => item.telefone) %-->
+        <!--/td -->
         <td>
-            <%: Html.DisplayFor(modelItem => item.telefone) %>
+            <% 
+                if (item.isPM == true)
+                {
+            %>
+                    sim  
+            <% }
+                else
+            %>
+                    não
+            
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.isPM) %>
-        </td>
-        <td>
-            <%: Html.ActionLink("Editar", "Edit", new { id=item.idPessoa }) %> |
-            <%: Html.ActionLink("Detalhes", "Details", new { id=item.idPessoa }) %> |
-            <%: Html.ActionLink("Excluir", "Delete", new { id=item.idPessoa }) %>
+            <%: Html.ActionLink("editar", "Edit", new { id = item.idPessoa })%> |
+            <%: Html.ActionLink("detalhes", "Details", new { id=item.idPessoa }) %> |
+            <%: Html.ActionLink("excluir", "Delete", new { id=item.idPessoa }) %>
         </td>
     </tr>
 <% } %>

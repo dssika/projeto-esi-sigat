@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using SiGAT.Models;
 using SiGAT.Models.Negocio;
+using SiGAT.Models.Dados;
 
 namespace SiGAT.Controllers
 {
@@ -15,6 +16,7 @@ namespace SiGAT.Controllers
         private NegocioPessoa negocioPessoa = new NegocioPessoa();
         private NegocioEndereco negocioEndereco = new NegocioEndereco();
         private NegocioTelefone negocioTelefone = new NegocioTelefone();
+        private NegocioCidade negocioCidade = new NegocioCidade();
 
         //
         // GET: /Pessoa/
