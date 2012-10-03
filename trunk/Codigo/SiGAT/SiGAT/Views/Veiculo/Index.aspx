@@ -9,7 +9,7 @@
 <h2>Veículos</h2>
 
 <p>
-    <%: Html.ActionLink("Adicione", "Create") %>
+    <%: Html.ActionLink("Cadastrar", "Create") %>
 </p>
 <table>
     <tr>
