@@ -6,36 +6,36 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2>Pessoa</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Cadastrar", "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            cnh
+            CNH
         </th>
         <th>
-            cpf
+            CPF
         </th>
         <th>
-            nome
+            Nome
         </th>
         <th>
-            email
+            Email
         </th>
         <th>
-            dataNascimento
+            Data de Nascimento
         </th>
         <th>
-            endereco
+            Endereço
         </th>
         <th>
-            telefone
+            Telefone
         </th>
         <th>
-            isPM
+            É Policial Militar?
         </th>
         <th></th>
     </tr>
@@ -67,9 +67,9 @@
             <%: Html.DisplayFor(modelItem => item.isPM) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.idPessoa }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.idPessoa }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.idPessoa }) %>
+            <%: Html.ActionLink("Editar", "Edit", new { id=item.idPessoa }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.idPessoa }) %> |
+            <%: Html.ActionLink("Excluir", "Delete", new { id=item.idPessoa }) %>
         </td>
     </tr>
 <% } %>

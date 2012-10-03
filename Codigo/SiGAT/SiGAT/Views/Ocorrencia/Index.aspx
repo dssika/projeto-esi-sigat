@@ -9,33 +9,33 @@
 <h2>Index</h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink("Cadastrar novo", "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            data
+            Data
         </th>
         <th>
-            gravidade
+            Gravidade
         </th>
         <th>
-            possuiVitimas
+            Possui Vitimas?
         </th>
         <th>
-            endereco
+            Endereço
         </th>
         <th>
-            condicaotempo
+            Condição do tempo
         </th>
         <th>
-            condicaovia
+            Condição da via
         </th>
         <th>
-            sinalizacaovia
+            Via sinalizada?
         </th>
         <th>
-            tipoocorrencia
+            Tipo de ocorrência
         </th>
         <th></th>
     </tr>
@@ -67,9 +67,9 @@
             <%: Html.DisplayFor(modelItem => item.tipoocorrencia.descricao) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.idOcorrencia }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.idOcorrencia }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.idOcorrencia }) %>
+            <%: Html.ActionLink("Editar", "Edit", new { id=item.idOcorrencia }) %> |
+            <%: Html.ActionLink("Detalhes", "Details", new { id=item.idOcorrencia }) %> |
+            <%: Html.ActionLink("Excluir", "Delete", new { id=item.idOcorrencia }) %>
         </td>
     </tr>
 <% } %>
