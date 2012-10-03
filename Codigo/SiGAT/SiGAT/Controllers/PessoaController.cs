@@ -33,7 +33,32 @@ namespace SiGAT.Controllers
             Pessoa pessoa = negocioPessoa.Obter(id);
             return View(pessoa);
         }
+        #region preencher cidades
 
+        public class CidadesSelecionadas
+        {
+            public string Nome { get; set; }
+            public Int32 IdCidade { get; set; }
+        }
+
+        public JsonResult ListaCidade(int id)
+        {
+
+            List<Cidade> cidades = negocioEndereco.ObterCidadePorEstado(id);
+
+            List<CidadesSelecionadas> cid = new List<CidadesSelecionadas>();
+            foreach (Cidade c in cidades)
+            {
+                CidadesSelecionadas f = new CidadesSelecionadas();
+                f.IdCidade = c.idCidade;
+                f.Nome = c.nome;
+                cid.Add(f);
+            }
+
+            return Json(cid.ToList(), JsonRequestBehavior.AllowGet);
+        }
+
+        #endregion
         //
         // GET: /Pessoa/Create
 
