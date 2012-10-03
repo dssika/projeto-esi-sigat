@@ -49,7 +49,16 @@
             <%: Html.DisplayFor(modelItem => item.gravidade) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.possuiVitimas) %>
+           
+       if (item.item.possuiVitimas == true)
+       {
+            %>
+                  sim
+            <% 
+                } else            
+            %>
+                 não
+        </td>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.endereco.logradouro) %>
