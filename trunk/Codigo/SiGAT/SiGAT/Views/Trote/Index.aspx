@@ -37,7 +37,15 @@
             <%: Html.DisplayFor(modelItem => item.telfoneRequisitante) %>
         </td>
         <td>
-            <%: Html.Label(item.deslocouViatura.ToString()) %>
+            <%
+       if (item.deslocouViatura == true)
+       {
+            %>
+                  sim
+            <% 
+                } else            
+            %>
+                 não
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.endereco.logradouro) %>
