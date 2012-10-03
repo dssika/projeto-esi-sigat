@@ -6,56 +6,56 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
+<h2>DExcluir</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Confirma exclusão?</h3>
 <fieldset>
-    <legend>ocorrencia</legend>
+    <legend>Ocorrência</legend>
 
-    <div class="display-label">data</div>
+    <div class="display-label">Data</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.data) %>
     </div>
 
-    <div class="display-label">gravidade</div>
+    <div class="display-label">Gravidade</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.gravidade) %>
     </div>
 
-    <div class="display-label">possuiVitimas</div>
+    <div class="display-label">Possui Vitimas?</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.possuiVitimas) %>
     </div>
 
-    <div class="display-label">endereco</div>
+    <div class="display-label">Endereço</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.endereco.logradouro) %>
     </div>
 
-    <div class="display-label">condicaotempo</div>
+    <div class="display-label">Condição do tempo</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.condicaotempo.descricao) %>
     </div>
 
-    <div class="display-label">condicaovia</div>
+    <div class="display-label">Condição da via</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.condicaovia.descricao) %>
     </div>
 
-    <div class="display-label">sinalizacaovia</div>
+    <div class="display-label">Via Sinalizada?</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.sinalizacaovia.descricao) %>
     </div>
 
-    <div class="display-label">tipoocorrencia</div>
+    <div class="display-label">Tipo de Ocorrência</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.tipoocorrencia.descricao) %>
     </div>
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <input type="submit" value="Excluir" /> |
+        <%: Html.ActionLink("Voltar", "Index") %>
     </p>
 <% } %>
 

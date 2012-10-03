@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Edit</h2>
+<h2>Editar</h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>ocorrencia</legend>
+        <legend>Ocorrência</legend>
 
         <%: Html.HiddenFor(model => model.idOcorrencia) %>
 
@@ -43,7 +43,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idEndereco, "endereco") %>
+            <%: Html.LabelFor(model => model.idEndereco, "Endereço") %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("idEndereco", String.Empty) %>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idCondicaoTempo, "condicaotempo") %>
+            <%: Html.LabelFor(model => model.idCondicaoTempo, "Condição do tempo") %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("idCondicaoTempo", String.Empty) %>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idCondicaoVia, "condicaovia") %>
+            <%: Html.LabelFor(model => model.idCondicaoVia, "Condição da via") %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("idCondicaoVia", String.Empty) %>
@@ -67,7 +67,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idSinalizacaoVia, "sinalizacaovia") %>
+            <%: Html.LabelFor(model => model.idSinalizacaoVia, "Via sinalizada?") %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("idSinalizacaoVia", String.Empty) %>
@@ -75,7 +75,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idTipoOcorrencia, "tipoocorrencia") %>
+            <%: Html.LabelFor(model => model.idTipoOcorrencia, "Tipo de Ocorrência") %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("idTipoOcorrencia", String.Empty) %>
@@ -83,13 +83,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Salvar" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar", "Index") %>
 </div>
 
 </asp:Content>
