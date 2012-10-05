@@ -3,7 +3,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Web;
 using SiGAT.Models;
-using SiGAT.Models.Negocio;
 using System.Collections.Generic;
 
 namespace SiGAT.Tests
@@ -11,8 +10,7 @@ namespace SiGAT.Tests
     
     
     /// <summary>
-    ///This is a test class for NegocioPessoaTest and is intended
-    ///to contain all NegocioPessoaTest Unit Tests
+    ///Teste da Classe NegocioPessoa
     ///</summary>
     [TestClass()]
     public class NegocioPessoaTest
@@ -39,10 +37,9 @@ namespace SiGAT.Tests
         }
 
         #region Additional test attributes
-        // 
-        //You can use the following additional attributes as you write your tests:
-        //
-        //Use ClassInitialize to run code before running the first test in the class
+        
+        
+        //run code before running the first test in the class
         [ClassInitialize()]
         public static void MyClassInitialize(TestContext testContext)
         {
@@ -55,13 +52,13 @@ namespace SiGAT.Tests
             negocioPessoa = null;
         }
         
-        //Use TestInitialize to run code before running each test
+        //run code before running each test
         [TestInitialize()]
         public void MyTestInitialize()
         {
         }
         
-        //Use TestCleanup to run code after each test has run
+        //run code after each test has run
         [TestCleanup()]
         public void MyTestCleanup()
         {
@@ -73,9 +70,6 @@ namespace SiGAT.Tests
         /// <summary>
         ///A test for NegocioPessoa Constructor
         ///</summary>
-        // TODO: Ensure that the UrlToTest attribute specifies a URL to an ASP.NET page (for example,
-        // http://.../Default.aspx). This is necessary for the unit test to be executed on the web server,
-        // whether you are testing a page, web service, or a WCF service.
         [TestMethod()]
         public void NegocioPessoaConstructorTest()
         {
@@ -89,57 +83,25 @@ namespace SiGAT.Tests
         [TestMethod()]
         public void EditarTest()
         {
-            negocioPessoa = new NegocioPessoa();
-            Telefone telefone = new Telefone();
-            telefone.ddd = 79;
-            telefone.numero = 99089999;
-
-            Endereco endereco = new Endereco();
-            endereco.logradouro = "rua teste";
-            endereco.bairro = "bairro teste";
-            endereco.cep = "49500-000";
-            endereco.idCidade = 8553;
-
             Pessoa pessoa = new Pessoa();
-            string nome = "Jessica S Santos";
-            int cpf = 123456;
-            int cnh = 123456;
-            string email = "teste@teste.com";
-            DateTime dataNasc = DateTime.Now;
-            //string DataFormatada = dataNasc.ToString("dd/MM/yyyy");
 
-
-            pessoa.nome = nome;
-            pessoa.cnh = cnh;
-            pessoa.cpf = cpf;
-            pessoa.email = email;
-            pessoa.dataNascimento = dataNasc;
-            pessoa.endereco = endereco;
+            pessoa.idPessoa = 2;
+            pessoa.nome = "Jessica da Silva Santos";
+            pessoa.email = "testemodificadonoteste@teste.com";
+            pessoa.dataNascimento = new DateTime(2007, 05, 01);
             pessoa.isPM = false;
 
-            bool expected = true;
-            bool actual;
-            //negocioPessoa.Editar(pessoa);
-            //Pessoa _pessoa = negocioPessoa.Obter(pessoa.idPessoa);
 
-            //if (pessoa.nome.Equals(_pessoa.nome))
-            //{
-                actual = true;
-            //}
-            //else
-            //{
-            //    actual = false;
-            //}
-            //Assert.AreEqual(expected, actual);
-            Assert.IsNotNull(actual);
-            //Assert.Inconclusive("Sucess ^^");
+            Assert.IsTrue(negocioPessoa.Editar(pessoa));
+            
+            Pessoa pessoaRecuperada = negocioPessoa.Obter(pessoa.idPessoa);
+
+            Assert.AreEqual(pessoa.nome, pessoaRecuperada.nome);
+            
         }
         /// <summary>
-        ///A test for Inserir
+        ///Teste de Inserir
         ///</summary>
-        // TODO: Ensure that the UrlToTest attribute specifies a URL to an ASP.NET page (for example,
-        // http://.../Default.aspx). This is necessary for the unit test to be executed on the web server,
-        // whether you are testing a page, web service, or a WCF service.
         [TestMethod()]
         public void InserirTest()
         {
@@ -181,7 +143,7 @@ namespace SiGAT.Tests
         }
 
         /// <summary>
-        ///A test for InserirEndereco
+        ///Teste de InserirEndereco
         ///</summary>
         [TestMethod()]
         public void InserirEnderecoTest()
@@ -196,7 +158,7 @@ namespace SiGAT.Tests
         }
 
         /// <summary>
-        ///Obter
+        ///Teste de Obter
         ///</summary>
         [TestMethod()]
         public void ObterTest()
@@ -211,7 +173,7 @@ namespace SiGAT.Tests
         }
 
         /// <summary>
-        ///Obter Todas as pessoas
+        ///Teste de Obter Todas as pessoas
         ///</summary>
         [TestMethod()]
         public void ObterTodosTest()
@@ -225,11 +187,8 @@ namespace SiGAT.Tests
         }
 
         /// <summary>
-        ///A test for Remover
+        ///Teste de Remover
         ///</summary>
-        // TODO: Ensure that the UrlToTest attribute specifies a URL to an ASP.NET page (for example,
-        // http://.../Default.aspx). This is necessary for the unit test to be executed on the web server,
-        // whether you are testing a page, web service, or a WCF service.
         [TestMethod()]
         public void RemoverTest()
         {

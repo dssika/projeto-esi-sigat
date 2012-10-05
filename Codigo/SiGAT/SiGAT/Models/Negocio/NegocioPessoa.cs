@@ -59,6 +59,13 @@ namespace SiGAT.Models.Negocio
             Pessoa _pessoa = Obter(pessoa.idPessoa);
             _pessoa.nome = pessoa.nome;
             _pessoa.cpf = pessoa.cpf;
+            _pessoa.cnh = pessoa.cnh;
+            _pessoa.email = pessoa.email;
+            _pessoa.dataNascimento = pessoa.dataNascimento;
+            
+            _pessoa.isPM = pessoa.isPM;
+
+
             return repositorioPessoa.SaveChanges() > 0;
         }
 
