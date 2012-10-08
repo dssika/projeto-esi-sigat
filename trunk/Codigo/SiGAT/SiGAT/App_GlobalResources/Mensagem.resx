@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="erro_nome_requerido" xml:space="preserve">
-    <value>O {0} é um campo requerido</value>
+  <data name="erro_campo_requerido" xml:space="preserve">
+    <value>O {0} é um campo obrigatório</value>
+  </data>
+  <data name="erro_limite_caracteres" xml:space="preserve">
+    <value>Excedeu o limite de caracteres</value>
   </data>
   <data name="label_pessoa_nome" xml:space="preserve">
     <value>Nome</value>
