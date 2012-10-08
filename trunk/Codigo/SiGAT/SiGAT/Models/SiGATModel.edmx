@@ -144,6 +144,7 @@
             <PropertyRef Name="idEstado" />
           </Key>
           <Property Name="idEstado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="uf" Type="varchar" MaxLength="2" />
           <Property Name="nome" Type="varchar" MaxLength="45" />
         </EntityType>
         <EntityType Name="ocorrencia">
@@ -228,7 +229,7 @@
           </Key>
           <Property Name="idVeiculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="renavan" Type="int" Nullable="false" />
-          <Property Name="placa" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="placa" Type="varchar" Nullable="false" MaxLength="7" />
           <Property Name="marca" Type="char" MaxLength="20" />
           <Property Name="modelo" Type="char" MaxLength="30" />
           <Property Name="anoFabricacao" Type="int" />
@@ -596,6 +597,7 @@
           <Property Name="idEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nome" Type="String" />
           <NavigationProperty Name="cidade" Relationship="SiGATModel.FK_Estado" FromRole="estado" ToRole="cidade" />
+          <Property Type="String" Name="uf" />
         </EntityType>
         <EntityType Name="ocorrencia">
           <Key>
@@ -866,7 +868,8 @@
             <ScalarProperty Name="idCidade" ColumnName="idCidade" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="EstadoSet"><EntityTypeMapping TypeName="SiGATModel.Estado"><MappingFragment StoreEntitySet="estado">
-            <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+            <ScalarProperty Name="uf" ColumnName="uf" />
+                <ScalarProperty Name="idEstado" ColumnName="idEstado" />
             <ScalarProperty Name="nome" ColumnName="nome" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="ocorrencia"><EntityTypeMapping TypeName="SiGATModel.ocorrencia"><MappingFragment StoreEntitySet="ocorrencia">

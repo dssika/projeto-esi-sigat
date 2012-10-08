@@ -45,12 +45,23 @@ namespace SiGAT.Controllers
         // POST: /Veiculo/Create
 
         [HttpPost]
-        public ActionResult Create(Veiculo veiculo)
+        public ActionResult Create(VeiculoModel veiculo)
         {
             ViewBag.idProprietario = new SelectList(negociopessoa.ObterTodos().ToList(), "idPessoa", "nome", veiculo.idProprietario);
             if (ModelState.IsValid)
             {
-                negocioveiculo.Inserir(veiculo);
+                Veiculo auxiliar = new Veiculo();
+                auxiliar.idVeiculo = veiculo.idVeiculo;
+                auxiliar.renavan = veiculo.renavan;
+                auxiliar.placa = veiculo.placa;
+                auxiliar.marca = veiculo.marca;
+                auxiliar.modelo = veiculo.modelo;
+                auxiliar.anoFabricacao = veiculo.anoFabricacao;
+                auxiliar.tipo = veiculo.tipo;
+                auxiliar.idProprietario = veiculo.idProprietario;
+
+
+                negocioveiculo.Inserir(auxiliar);
                 return RedirectToAction("Index");  
             }
 

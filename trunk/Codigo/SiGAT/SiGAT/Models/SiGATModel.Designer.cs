@@ -1099,6 +1099,30 @@ namespace SiGAT.Models
         private global::System.String _nome;
         partial void OnnomeChanging(global::System.String value);
         partial void OnnomeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String uf
+        {
+            get
+            {
+                return _uf;
+            }
+            set
+            {
+                OnufChanging(value);
+                ReportPropertyChanging("uf");
+                _uf = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("uf");
+                OnufChanged();
+            }
+        }
+        private global::System.String _uf;
+        partial void OnufChanging(global::System.String value);
+        partial void OnufChanged();
 
         #endregion
     
