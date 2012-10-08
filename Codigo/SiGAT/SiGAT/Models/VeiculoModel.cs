@@ -12,6 +12,7 @@ namespace SiGAT.Models
         public int idVeiculo { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_campo_requerido")]
+        [StringLength(11, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_limite_caracteres")]
         public int renavan { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_campo_requerido")]
