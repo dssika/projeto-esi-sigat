@@ -46,9 +46,15 @@
             %>
                   sim
             <% 
-                } else            
+       }
+
+       else
+       {
+                 
             %>
                  não
+                 <%
+       }  %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.endereco.logradouro) %>
