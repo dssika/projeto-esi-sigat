@@ -44,7 +44,7 @@
        if (item.deslocouViatura == true)
        {
             %>
-                  sim
+                sim
             <% 
        }
 
@@ -52,8 +52,9 @@
        {
                  
             %>
-                 não
-                 <%
+                não
+            <%
+                                          
        }  %>
         </td>
         <td>
