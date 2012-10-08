@@ -60,7 +60,7 @@ namespace SiGAT.Models.Negocio
         {
             IQueryable<Cidade> cidades = repositorioCidade.GetQueryable().Where(cidade => cidade.idEstado == idEstado);
 
-            return cidades.ToList();
+                return cidades.ToList();
 
 
 

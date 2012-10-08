@@ -23,9 +23,12 @@
             Deslocou Viatura?
         </th>
         <th>
-            Endereço
+               Endereço
         </th>
-        <th></th>
+
+        <th>
+            Opções
+        </th>
     </tr>
 
 <% foreach (var item in Model) { %>
