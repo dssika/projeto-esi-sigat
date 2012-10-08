@@ -66,14 +66,6 @@
             <%: Html.ValidationMessageFor(model => model.idEndereco) %>
         </div>
 
-        <!--div class="editor-label">
-            <!--%: Html.LabelFor(model => model.idTelefone, "telefone") %>
-        </div>
-        <div class="editor-field">
-            <!--%: Html.DropDownList("idTelefone", String.Empty) %>
-            <!--%: Html.ValidationMessageFor(model => model.idTelefone) %>
-        </div-->
-
         <div class="editor-label">
             <%: Html.LabelFor(model => model.isPM) %>
         </div>
@@ -86,10 +78,9 @@
             <input type="submit" value="Salvar" />
         </p>
     </fieldset>
-<% } %>
 
 <div>
     <%: Html.ActionLink("Voltar", "Index") %>
 </div>
-
+<% } %>
 </asp:Content>

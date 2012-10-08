@@ -6,10 +6,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Cadastro de Envolvidos: </h2>
+<h2>Cadastro de Pessoa</h2>
 
 <p>
-    <%: Html.ActionLink("Cadastrar novo Envolvido", "Create") %>
+    <%: Html.ActionLink("Cadastrar nova Pessoa", "Create") %>
 </p>
 <table>
     <tr>
@@ -31,9 +31,6 @@
         <th>
             Endereço
         </th>
-        <!--th>
-            Telefone
-        </th-->
         <th>
             É Policial Militar?
         </th>
@@ -60,9 +57,6 @@
         <td>
             <%: Html.DisplayFor(modelItem => item.endereco.logradouro) %>
         </td>
-        <!--td-->
-            <!--%: Html.DisplayFor(modelItem => item.telefone) %-->
-        <!--/td -->
         <td>
             <% 
                 if (item.isPM == true)

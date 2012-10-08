@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Cadastrar</h2>
+<h2>Cadastrar Pessoa</h2>
 
 <script type="text/javascript">
 
@@ -33,13 +33,11 @@
             listaCidade($(this).val());
         });
     });
-    //chamada ajax para a Action ListaCidade
-    //passando como parâmetro a Estado selecionado
+    //ajax para a Action ListaCidade
     function listaCidade(uf) {
         $.getJSON('<%= Url.Action("ListaCidade") %>/' + uf, listaCidadeCallBack);
     }
-    //função que irá ser chamada quando terminar
-    //a chamada ajax
+
     function listaCidadeCallBack(json) {
         //Limpar os itens que são maiores que 0
         //Ou seja: não retirar o primeiro item
@@ -50,7 +48,7 @@
         });
     }
 
-    //Campo Data-AdicionaDataPicker
+    //Campo Data
     $(function () {
         $(".datepicker").datepicker({
             dateFormat: 'dd/mm/yy',
@@ -69,7 +67,7 @@
         });
     });
 
-    //Mascaras dos Campos
+    //Campos
     jQuery(function () {
         $(".larguraTelefone").mask("?(99)9999-9999");
         $(".larguraCpf").mask("?999.999.999-99");
@@ -83,133 +81,86 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Envolvido</legend>
-
-        <fieldset>
         <legend>Dados</legend>
-        <div class="editor-label">
+        <table width="80%">
+              <tr>     
+                 <td>
+
             <%: Html.LabelFor(model => model.nome) %>
-        </div>
-        <div class="editor-field">
             <%: Html.EditorFor(model => model.nome) %>
             <%: Html.ValidationMessageFor(model => model.nome) %>
-        </div>
-
-        <div class="editor-label">
+                </td>
+                <td>
             <%: Html.LabelFor(model => model.cnh) %>
-        </div>
-        <div class="editor-field">
             <%: Html.EditorFor(model => model.cnh) %>
             <%: Html.ValidationMessageFor(model => model.cnh) %>
-        </div>
-
-        <div class="editor-label">
+                </td>
+                <td>
             <%: Html.LabelFor(model => model.cpf) %>
-        </div>
-        <div class="editor-field">
-        <!--%: Html.TextBoxFor(model => model.cpf, new { @class = "larguraCpf", @required = "" })%-->
-         <%: Html.TextBoxFor(model => model.cpf)%>
-            <!--%: Html.EditorFor(model => model.cpf) %-->
+            <%: Html.TextBoxFor(model => model.cpf)%>
             <%: Html.ValidationMessageFor(model => model.cpf) %>
-        </div>
-
-        <div class="editor-label">
+                </td>
+                <td>
             <%: Html.LabelFor(model => model.email) %>
-        </div>
-        <div class="editor-field">
             <%: Html.EditorFor(model => model.email) %>
             <%: Html.ValidationMessageFor(model => model.email) %>
-        </div>
-
-        <div class="editor-label">
+                </td>
+                <td>
             <%: Html.LabelFor(model => model.dataNascimento) %>
-        </div>
-        <div class="editor-field">
             <%: Html.EditorFor(model => model.dataNascimento) %>
             <%: Html.ValidationMessageFor(model => model.dataNascimento) %>
-        </div>
+        </td>
+        </tr>
+         </table>
         </fieldset>
         <fieldset>
         <legend>Endereço</legend>
 
-        <div class="editor-label">
+        <table width="80%">
+              <tr>
+                 <td>
             <%: Html.LabelFor(model => model.endereco.logradouro) %>
-        </div>
-        <div class="editor-field">
             <%: Html.EditorFor(model => model.endereco.logradouro) %>
             <%: Html.ValidationMessageFor(model => model.endereco.logradouro)%>
-        </div>
-
-        <div class="editor-label">
+                </td>
+                <td>
             <%: Html.LabelFor(model => model.endereco.bairro)%>
-        </div>
-        <div class="editor-field">
             <%: Html.EditorFor(model => model.endereco.bairro)%>
             <%: Html.ValidationMessageFor(model => model.endereco.bairro)%>
-        </div>
-
-        <div class="editor-label">
+                </td>
+                <td>
             <%: Html.LabelFor(model => model.endereco.cep)%>
-        </div>
-        <div class="editor-field">
             <%: Html.EditorFor(model => model.endereco.cep)%>
             <%: Html.ValidationMessageFor(model => model.endereco.cep)%>
-        </div>
-
-        <div class="editor-label">
+                </td>
+                <td>
             <%: Html.LabelFor(model => model.endereco.cidade.idEstado, "Estado")%>
-        </div>
-        <div class="editor-field">
             <%: Html.DropDownList("idEstado", "Selecione um estado")%>
             <%: Html.ValidationMessageFor(model => model.endereco.cidade.idEstado)%>
-        </div>
-        
-        <div class="editor-label">
+                </td>
+                <td>
             <%: Html.LabelFor(model => model.endereco.idCidade, "Cidade")%>
-        </div>
-        <div class="editor-field">
             <%: Html.DropDownList("idCidade", String.Empty) %>
             <%: Html.ValidationMessageFor(model => model.endereco.idCidade)%>
-        </div>
+                </td>
+                </tr>
+              </table>
     </fieldset>
-    <!--fieldset>
-        <legend>Telefone</legend>
-        <div class="editor-label">
-        
-        <!--%: Html.LabelFor(model => model.telefone) %>
-        </div>
-        <div class="editor-field">
-            </div>
-            <!--   mudança 26-08
-            %: Html.LabelFor(model => model.ddd) %>
-        </div-->
-        <!--div class="editor-field">
-        <!--%: Html.TextBoxFor(model => model.telefone)%>
-             <!--%: Html.DropDownList("idTelefone", String.Empty)%-->
-            <!--%: Html.ValidationMessageFor(model => model.ddd) %-->
-        <!--/div>
-
-        <!--div class="editor-label">
-            <!--%: Html.LabelFor(model => model.numero) %-->
-        <!--/div>
-        <!--div class="editor-field">
-            <!--%: Html.EditorFor(model => model.numero) %-->
-            <!--%: Html.ValidationMessageFor(model => model.numero) %-->
-        <!--/div>
-    <!--/fieldset-->
-
-    <fieldset>
-        <legend>PM</legend>
     
-        <div class="editor-label">
-            <!--%: Html.LabelFor(model => model.isPM, String.Empty) %-->
-        </div>
-        <div class="editor-field">
-            <!--%: Html.EditorFor(model => model.isPM) %-->
-            
+    <fieldset>
+        <legend>A pessoa cadastrada é Polícia Militar?</legend>
+        <div align="center">
+        <table width="20%">
+        <tr>
+        <td>
         <%: Html.RadioButtonFor(model => model.isPM, true) %> sim <br />
+        </td>
+        <td>
         <%: Html.RadioButtonFor(model => model.isPM, false) %> não
-            <%: Html.ValidationMessageFor(model => model.isPM) %>
+        </td>
+        <%: Html.ValidationMessageFor(model => model.isPM) %>
+        </tr>
+        </table>
         </div>
         </fieldset>
         <p>
