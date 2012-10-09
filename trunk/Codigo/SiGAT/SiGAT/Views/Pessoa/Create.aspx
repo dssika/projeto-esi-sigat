@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<SiGAT.Models.PessoaModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<SiGAT.Models.Pessoa>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Cadastro
@@ -139,9 +139,9 @@
             <%: Html.ValidationMessageFor(model => model.endereco.cidade.idEstado)%>
                 </td>
                 <td>
-            <%: Html.LabelFor(model => model.endereco.idCidade, "Cidade")%>
+            <%: Html.LabelFor(model => model.endereco.cidade.idCidade, "Cidade")%>
             <%: Html.DropDownList("idCidade", String.Empty) %>
-            <%: Html.ValidationMessageFor(model => model.endereco.idCidade)%>
+            <%: Html.ValidationMessageFor(model => model.endereco.cidade.idCidade)%>
                 </td>
                 </tr>
               </table>
