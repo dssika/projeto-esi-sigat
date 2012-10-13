@@ -33,7 +33,5 @@ namespace SiGAT.Models
 
         [Required]
         public bool isPM { get; set; }
-
-        public EnderecoModel endereco { get; set; }
     }
 }
