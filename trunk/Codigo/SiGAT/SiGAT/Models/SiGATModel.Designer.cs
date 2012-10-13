@@ -2446,15 +2446,15 @@ namespace SiGAT.Models
         /// </summary>
         /// <param name="idTrote">Initial value of the idTrote property.</param>
         /// <param name="data">Initial value of the data property.</param>
-        /// <param name="telfoneRequisitante">Initial value of the telfoneRequisitante property.</param>
         /// <param name="deslocouViatura">Initial value of the deslocouViatura property.</param>
-        public static Trote CreateTrote(global::System.Int32 idTrote, global::System.DateTime data, global::System.String telfoneRequisitante, global::System.Boolean deslocouViatura)
+        /// <param name="telefoneRequisitante">Initial value of the telefoneRequisitante property.</param>
+        public static Trote CreateTrote(global::System.Int32 idTrote, global::System.DateTime data, global::System.Boolean deslocouViatura, global::System.String telefoneRequisitante)
         {
             Trote trote = new Trote();
             trote.idTrote = idTrote;
             trote.data = data;
-            trote.telfoneRequisitante = telfoneRequisitante;
             trote.deslocouViatura = deslocouViatura;
+            trote.telefoneRequisitante = telefoneRequisitante;
             return trote;
         }
 
@@ -2517,30 +2517,6 @@ namespace SiGAT.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String telfoneRequisitante
-        {
-            get
-            {
-                return _telfoneRequisitante;
-            }
-            set
-            {
-                OntelfoneRequisitanteChanging(value);
-                ReportPropertyChanging("telfoneRequisitante");
-                _telfoneRequisitante = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("telfoneRequisitante");
-                OntelfoneRequisitanteChanged();
-            }
-        }
-        private global::System.String _telfoneRequisitante;
-        partial void OntelfoneRequisitanteChanging(global::System.String value);
-        partial void OntelfoneRequisitanteChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Boolean deslocouViatura
         {
             get
@@ -2583,6 +2559,30 @@ namespace SiGAT.Models
         private Nullable<global::System.Int32> _idEndereco;
         partial void OnidEnderecoChanging(Nullable<global::System.Int32> value);
         partial void OnidEnderecoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String telefoneRequisitante
+        {
+            get
+            {
+                return _telefoneRequisitante;
+            }
+            set
+            {
+                OntelefoneRequisitanteChanging(value);
+                ReportPropertyChanging("telefoneRequisitante");
+                _telefoneRequisitante = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("telefoneRequisitante");
+                OntelefoneRequisitanteChanged();
+            }
+        }
+        private global::System.String _telefoneRequisitante;
+        partial void OntelefoneRequisitanteChanging(global::System.String value);
+        partial void OntelefoneRequisitanteChanged();
 
         #endregion
     

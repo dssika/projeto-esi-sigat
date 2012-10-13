@@ -82,7 +82,7 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend>Dados</legend>
-        <table width="80%">
+        <table>
               <tr>     
                  <td>
 
@@ -116,7 +116,7 @@
         <fieldset>
         <legend>Endereço</legend>
 
-        <table width="80%">
+        <table>
               <tr>
                  <td>
             <%: Html.LabelFor(model => model.endereco.logradouro) %>
@@ -148,7 +148,7 @@
     </fieldset>
     
     <fieldset>
-        <legend>A pessoa cadastrada é Polícia Militar?</legend>
+        <legend>Policial Militar?</legend>
         <div align="center">
         <table width="20%">
         <tr>
@@ -166,8 +166,6 @@
         <p>
             <input type="submit" value="Cadastrar" />
         </p>
-        </fieldset>
-    </fieldset>
 <% } %>
 
 <div>

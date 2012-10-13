@@ -219,7 +219,7 @@
           </Key>
           <Property Name="idTrote" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="data" Type="datetime" Nullable="false" />
-          <Property Name="telfoneRequisitante" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="telefoneRequisitante" Type="varchar" Nullable="false" MaxLength="45" />
           <Property Name="deslocouViatura" Type="bool" Nullable="false" />
           <Property Name="idEndereco" Type="int" />
         </EntityType>
@@ -229,7 +229,7 @@
           </Key>
           <Property Name="idVeiculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="renavan" Type="int" Nullable="false" />
-          <Property Name="placa" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="placa" Type="varchar" Nullable="false" MaxLength="8" />
           <Property Name="marca" Type="char" MaxLength="20" />
           <Property Name="modelo" Type="char" MaxLength="30" />
           <Property Name="anoFabricacao" Type="int" />
@@ -672,11 +672,11 @@
           </Key>
           <Property Name="idTrote" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="data" Type="DateTime" Nullable="false" />
-          <Property Name="telfoneRequisitante" Type="String" Nullable="false" />
           <Property Name="deslocouViatura" Type="Boolean" Nullable="false" />
           <Property Name="idEndereco" Type="Int32" />
           <NavigationProperty Name="endereco" Relationship="SiGATModel.fk_Trote_Endereco1" FromRole="trote" ToRole="endereco" />
           <NavigationProperty Name="pessoa" Relationship="SiGATModel.pmtrote" FromRole="trote" ToRole="pessoa" />
+          <Property Type="String" Name="telefoneRequisitante" Nullable="false" />
         </EntityType>
         <EntityType Name="Veiculo">
           <Key>
@@ -908,9 +908,9 @@
             <ScalarProperty Name="descricao" ColumnName="descricao" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="TroteSet"><EntityTypeMapping TypeName="SiGATModel.Trote"><MappingFragment StoreEntitySet="trote">
-            <ScalarProperty Name="idTrote" ColumnName="idTrote" />
+            <ScalarProperty Name="telefoneRequisitante" ColumnName="telefoneRequisitante" />
+                <ScalarProperty Name="idTrote" ColumnName="idTrote" />
             <ScalarProperty Name="data" ColumnName="data" />
-            <ScalarProperty Name="telfoneRequisitante" ColumnName="telfoneRequisitante" />
             <ScalarProperty Name="deslocouViatura" ColumnName="deslocouViatura" />
             <ScalarProperty Name="idEndereco" ColumnName="idEndereco" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
@@ -987,7 +987,7 @@
         <EntityTypeShape EntityType="SiGATModel.SinalizacaoVia" Width="1.5" PointX="6.375" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="SiGATModel.Telefone" Width="1.5" PointX="10.75" PointY="7.25" Height="1.9802864583333317" IsExpanded="true" />
         <EntityTypeShape EntityType="SiGATModel.TipoOcorrencia" Width="1.5" PointX="8.125" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="SiGATModel.Trote" Width="1.5" PointX="12.875" PointY="2.125" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SiGATModel.Trote" Width="1.5" PointX="12.875" PointY="2.125" Height="2.3648893229166656" IsExpanded="true" />
         <EntityTypeShape EntityType="SiGATModel.Veiculo" Width="1.5" PointX="8.375" PointY="4.25" Height="2.9417936197916674" IsExpanded="true" />
         <AssociationConnector Association="SiGATModel.FK_Cidade" ManuallyRouted="false">
           <ConnectorPoint PointX="1.8125" PointY="5.625" />
@@ -1044,8 +1044,8 @@
           <ConnectorPoint PointX="10.75" PointY="4.078125" />
         </AssociationConnector>
         <AssociationConnector Association="SiGATModel.pmtrote" ManuallyRouted="false">
-          <ConnectorPoint PointX="12.25" PointY="3.5574446614583337" />
-          <ConnectorPoint PointX="12.875" PointY="3.5574446614583337" />
+          <ConnectorPoint PointX="12.25" PointY="3.5574446614583328" />
+          <ConnectorPoint PointX="12.875" PointY="3.5574446614583328" />
         </AssociationConnector>
         <AssociationConnector Association="SiGATModel.veiculoocorrencia" ManuallyRouted="false">
           <ConnectorPoint PointX="7" PointY="5.7208968098958337" />

@@ -16,7 +16,7 @@ namespace SiGAT.Models
         public int renavan { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_campo_requerido")]
-        [StringLength(20, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_limite_caracteres")]
+        [StringLength(8, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_limite_caracteres")]
         public string placa { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "erro_campo_requerido")]

@@ -25,7 +25,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.telfoneRequisitante, "Telefone do Requisitante") %>
+            <%: Html.LabelFor(model => model.telefoneRequisitante, "Telefone do Requisitante") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.telfoneRequisitante) %>
