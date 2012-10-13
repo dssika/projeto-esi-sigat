@@ -15,3 +15,6 @@ C:\Users\Jessica\Desktop\projeto-esi-sigat\trunk\Codigo\SiGAT\SiGAT\bin\SiGAT.pd
 C:\Users\Jessica\Desktop\projeto-esi-sigat\trunk\Codigo\SiGAT\SiGAT\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Jessica\Desktop\projeto-esi-sigat\trunk\Codigo\SiGAT\SiGAT\obj\Debug\SiGAT.dll
 C:\Users\Jessica\Desktop\projeto-esi-sigat\trunk\Codigo\SiGAT\SiGAT\obj\Debug\SiGAT.pdb
+D:\Elias\Desktop\Sigat\trunk\Codigo\SiGAT\SiGAT\obj\Debug\ResolveAssemblyReference.cache
+D:\Elias\Desktop\Sigat\trunk\Codigo\SiGAT\SiGAT\obj\Debug\SiGAT.dll
+D:\Elias\Desktop\Sigat\trunk\Codigo\SiGAT\SiGAT\obj\Debug\SiGAT.pdb
