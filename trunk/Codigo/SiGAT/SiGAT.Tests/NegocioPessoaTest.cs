@@ -15,8 +15,6 @@ namespace SiGAT.Tests
     [TestClass()]
     public class NegocioPessoaTest
     {
-
-
         private TestContext testContextInstance;
         private static NegocioPessoa negocioPessoa;
 
